@@ -8,7 +8,7 @@ export const QuoteForm: React.FC = () => {
   const [formData, setFormData] = useState({
     serviceCategory: 'bird-safety',
     customSize: '150',
-    city: 'Bangalore',
+    city: 'East Bangalore',
     name: '',
     phone: '',
   });
@@ -69,17 +69,17 @@ export const QuoteForm: React.FC = () => {
   };
 
   const triggerWhatsAppRedirect = () => {
-    const textMessage = `Hello Dhruva Safety Nets, I just generated an online estimate Quote:\n\n` +
+    const textMessage = `Hello Druva Safety Nets, I just generated an online estimate Quote:\n\n` +
       `- Category: ${formData.serviceCategory === 'bird-safety' ? 'Bird/Child Nets' : formData.serviceCategory === 'invisible-grill' ? 'Invisible Grills' : 'Sports/Industrial Nets'}\n` +
       `- Size: ${formData.customSize} Sq.Ft.\n` +
-      `- City: ${formData.city}\n` +
+      `- Zone: ${formData.city}\n` +
       `- Name: ${formData.name}\n` +
       `- Phone: ${formData.phone}\n\n` +
       `Estimated Price: ₹${calculatedQuote.min.toLocaleString('en-IN')} - ₹${calculatedQuote.max.toLocaleString('en-IN')}.\n` +
       `Please contact me to schedule a free physical measurement inspection.`;
 
     const encodedText = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+919980493004&text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+917989612281&text=${encodedText}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -195,16 +195,17 @@ export const QuoteForm: React.FC = () => {
             />
 
             <Select
-              label="Select Service City"
+              label="Select Service Bangalore Zone"
               id="city"
               value={formData.city}
               onChange={(e) => setFormData({ ...formData, city: e.target.value })}
               options={[
-                { value: 'Bangalore', label: 'Bangalore / Bengaluru' },
-                { value: 'Mysore', label: 'Mysore / Mysuru' },
-                { value: 'Chennai', label: 'Chennai' },
-                { value: 'Hyderabad', label: 'Hyderabad' },
-                { value: 'Other', label: 'Other South Indian Region' },
+                { value: 'East Bangalore', label: 'East Bangalore (Whitefield, Bellandur, HSR)' },
+                { value: 'South Bangalore', label: 'South Bangalore (Jayanagar, JP Nagar, E-City)' },
+                { value: 'North Bangalore', label: 'North Bangalore (Hebbal, Yelahanka, Vidyaranyapura)' },
+                { value: 'West Bangalore', label: 'West Bangalore (RR Nagar, Rajajinagar, Kengeri)' },
+                { value: 'Central Bangalore', label: 'Central Bangalore (Indiranagar, Malleshwaram)' },
+                { value: 'Other Bangalore Area', label: 'Other Bangalore Area / Outskirts' },
               ]}
             />
 

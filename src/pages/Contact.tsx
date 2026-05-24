@@ -1,15 +1,34 @@
 import React from 'react';
 import { QuoteForm } from '../components/ui/QuoteForm';
-import { Phone, Mail, Clock, MapPin, ShieldAlert } from 'lucide-react';
+import { Phone, Clock, MapPin, ShieldAlert } from 'lucide-react';
+
+const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 
 export const Contact: React.FC = () => {
   return (
     <div className="flex flex-col w-full bg-slate-50/50">
       {/* Header Banner */}
       <section className="bg-slate-900 text-white py-16 px-6 text-center relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.06),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(142,152,165,0.06),transparent_70%)]"></div>
         <div className="max-w-4xl mx-auto flex flex-col gap-3 relative z-10">
-          <span className="text-xs uppercase tracking-widest text-amber-500 font-extrabold font-display">Schedule Free Inspection</span>
+          <span className="text-xs uppercase tracking-widest text-brand-accent font-extrabold font-display">Schedule Free Inspection</span>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
             Connect With Rigging Experts
           </h1>
@@ -27,19 +46,19 @@ export const Contact: React.FC = () => {
             <span className="text-xs uppercase tracking-widest text-slate-400 font-extrabold font-display">Immediate Support</span>
             <h2 className="font-display font-black text-2xl md:text-3xl text-brand-primary">Our Operation Details</h2>
             <p className="text-slate-500 font-sans text-sm leading-relaxed">
-              We operate localized high-rise technician networks across Bangalore, Chennai, Hyderabad, and Mysore, enabling same-day physical inspections.
+              We operate localized high-rise technician networks across East, West, North, and South Bangalore, enabling same-day physical inspections and sample demonstrations.
             </p>
           </div>
 
           <div className="flex flex-col gap-5">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-brand-primary shrink-0">
-                <Phone className="w-5 h-5 text-amber-500" />
+                <Phone className="w-5 h-5 text-brand-primary" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Direct Hotline</span>
-                <a href="tel:9980493004" className="text-base font-bold text-brand-primary hover:underline font-display">
-                  +91 9980493004
+                <a href="tel:7989612281" className="text-base font-bold text-brand-primary hover:underline font-display">
+                  +91 79896 12281
                 </a>
                 <span className="text-[10px] text-slate-400 font-sans">Free consulting and sample displays</span>
               </div>
@@ -47,19 +66,24 @@ export const Contact: React.FC = () => {
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-brand-primary shrink-0">
-                <Mail className="w-5 h-5 text-amber-500" />
+                <InstagramIcon className="w-5 h-5 text-brand-primary" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Email Inquiry</span>
-                <a href="mailto:dhruvasafetynets@gmail.com" className="text-base font-bold text-brand-primary hover:underline font-sans">
-                  dhruvasafetynets@gmail.com
+                <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Follow Instagram</span>
+                <a 
+                  href="https://www.instagram.com/druva_safety_nets?igsh=MTM3dHhhbXVveHhxdg==" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-base font-bold text-brand-primary hover:underline font-sans"
+                >
+                  @druva_safety_nets
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-brand-primary shrink-0">
-                <Clock className="w-5 h-5 text-amber-500" />
+                <Clock className="w-5 h-5 text-brand-primary" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Business Hours</span>
@@ -72,7 +96,7 @@ export const Contact: React.FC = () => {
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-brand-primary shrink-0">
-                <MapPin className="w-5 h-5 text-amber-500" />
+                <MapPin className="w-5 h-5 text-brand-primary" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Head Office Bengaluru</span>
@@ -84,8 +108,8 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-amber-50 border border-amber-100 rounded-3xl p-5 flex items-start gap-3 mt-4">
-            <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="bg-slate-100/50 border border-slate-200/50 rounded-3xl p-5 flex items-start gap-3 mt-4">
+            <ShieldAlert className="w-5 h-5 text-brand-primary shrink-0 mt-0.5 animate-mover" />
             <p className="text-xs text-slate-600 font-sans leading-relaxed">
               <strong>Need emergency fitments?</strong> In case of urgent window fall safety issues or active pigeon cleanings, call our hotline directly to trigger same-day priority dispatch.
             </p>

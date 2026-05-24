@@ -8,7 +8,7 @@ import { Accordion } from '../components/ui/Accordion';
 
 export const Home: React.FC = () => {
   const homeFaqs = [
-    { question: 'What materials are used in Dhruva Safety Nets?', answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.' },
+    { question: 'What materials are used in Druva Safety Nets?', answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.' },
     { question: 'Do you offer a warranty on safety installations?', answer: 'Yes! We provide an official 5-Year Performance Warranty card covering color degradation, tensile strength decay, and hook structural stability under harsh outdoor sunlight and heavy rain.' },
     { question: 'How much time does it take to complete the installation?', answer: 'For standard residential balconies and window overlays, our certified high-rise technicians complete the full measurement and installation process in 1.5 to 3 hours.' },
     { question: 'Can these nets be customized for odd-shaped balconies?', answer: 'Absolutely. We custom cut, align, and tension the netting to accommodate any architectural curve, ventilation duct shaft, air conditioner unit framework, or open utility space.' }
@@ -26,13 +26,13 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold font-sans tracking-wide text-amber-400">
-              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold font-sans tracking-wide text-brand-accent">
+              <Star className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
               <span>South India's Most Trusted Safety Installer</span>
             </div>
             
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
-              Architectural <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Safety Systems</span> for Modern Living
+              Architectural <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-300 to-slate-400">Safety Systems</span> for Modern Living
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
@@ -46,10 +46,10 @@ export const Home: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:9980493004">
+              <a href="tel:7989612281">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
-                  <PhoneCall className="w-5 h-5 mr-2 text-amber-500" />
-                  +91 9980493004
+                  <PhoneCall className="w-5 h-5 mr-2 text-brand-accent" />
+                  +91 79896 12281
                 </Button>
               </a>
             </div>
@@ -57,15 +57,15 @@ export const Home: React.FC = () => {
             {/* Quick Metrics */}
             <div className="grid grid-cols-3 gap-6 md:gap-10 border-t border-white/10 pt-8 mt-4 w-full">
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-amber-400">12,000+</span>
+                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">12,000+</span>
                 <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Homes Protected</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-amber-400">5 Years</span>
+                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">5 Years</span>
                 <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Full Warranty</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-amber-400">Same-Day</span>
+                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">Same-Day</span>
                 <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Fast Execution</span>
               </div>
             </div>
@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-5 relative w-full flex justify-center">
             <div className="glass-card-dark rounded-3xl p-6 md:p-8 w-full border border-white/10 shadow-2xl relative">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-display font-bold">⚡</div>
+                <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-accent flex items-center justify-center font-display font-bold">⚡</div>
                 <div>
                   <h3 className="font-display font-bold text-base text-white">Instant Online Quote</h3>
                   <p className="text-[10px] text-slate-400 font-sans">Get budget calculations in 30 seconds</p>
@@ -104,7 +104,7 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Pillar 1: Bird Safety Nets */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100/80 shadow-lg shadow-slate-100 flex flex-col items-start gap-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-xl text-amber-600">🕸️</div>
+              <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center text-xl text-brand-primary">🕸️</div>
               <h3 className="font-display font-bold text-xl text-brand-primary">Bird & Child Safety Nets</h3>
               <p className="text-slate-500 font-sans text-sm leading-relaxed">
                 UV-stabilized virgin HDPE safety nets custom-measured for balcony fall prevention, pigeon protection, pet safeguards, and utility shafts.
@@ -121,7 +121,7 @@ export const Home: React.FC = () => {
 
             {/* Pillar 2: Invisible Grills */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100/80 shadow-lg shadow-slate-100 flex flex-col items-start gap-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-xl text-amber-600">🛡️</div>
+              <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center text-xl text-brand-primary">🛡️</div>
               <h3 className="font-display font-bold text-xl text-brand-primary">Invisible Grill Systems</h3>
               <p className="text-slate-500 font-sans text-sm leading-relaxed">
                 Grade 316 Marine Stainless Steel wire cables running vertically or horizontally. High-tensile security with 100% skyline views.
@@ -138,7 +138,7 @@ export const Home: React.FC = () => {
 
             {/* Pillar 3: Sports Nets */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100/80 shadow-lg shadow-slate-100 flex flex-col items-start gap-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-xl text-amber-600">⚽</div>
+              <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center text-xl text-brand-primary">⚽</div>
               <h3 className="font-display font-bold text-xl text-brand-primary">Sports & Industrial Rigging</h3>
               <p className="text-slate-500 font-sans text-sm leading-relaxed">
                 Heavy-gauge knotted sports enclosures for cricket practice, soccer boundaries, rooftop fields, atriums, and duct industrial safety.
@@ -208,7 +208,7 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col gap-16">
           
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-4">
-            <span className="text-xs uppercase tracking-widest text-amber-500 font-extrabold font-display">Uncompromising Quality</span>
+            <span className="text-xs uppercase tracking-widest text-brand-accent font-extrabold font-display">Uncompromising Quality</span>
             <h2 className="font-display font-black text-3xl sm:text-4xl text-white leading-tight">
               Engineered Safety Standards
             </h2>
@@ -219,7 +219,7 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center gap-3.5 p-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-amber-400 flex items-center justify-center text-xl">💎</div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-brand-accent flex items-center justify-center text-xl">💎</div>
               <h4 className="font-display font-bold text-lg text-white">SS 316 Wire Core</h4>
               <p className="text-xs text-slate-400 leading-relaxed font-sans">
                 Invisible grills feature Marine Grade 316 Stainless Steel cores wrapped in anti-abrasive DuPont Teflon sleeve. Zero rust.
@@ -227,7 +227,7 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center text-center gap-3.5 p-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-amber-400 flex items-center justify-center text-xl">☀️</div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-brand-accent flex items-center justify-center text-xl">☀️</div>
               <h4 className="font-display font-bold text-lg text-white">100% UV Protection</h4>
               <p className="text-xs text-slate-400 leading-relaxed font-sans">
                 Our polymer nets are treated with raw UV-stabilizing masterbatches, preventing color yellowing or sun decay for 8+ years.
@@ -235,7 +235,7 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center text-center gap-3.5 p-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-amber-400 flex items-center justify-center text-xl">🧱</div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-brand-accent flex items-center justify-center text-xl">🧱</div>
               <h4 className="font-display font-bold text-lg text-white">Anodized Tracks</h4>
               <p className="text-xs text-slate-400 leading-relaxed font-sans">
                 Invisible grill anchor tracks are machined out of heavy structural-grade anodized aluminum alloys for absolute pull strength.
@@ -243,7 +243,7 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center text-center gap-3.5 p-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-amber-400 flex items-center justify-center text-xl">🎖️</div>
+              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 text-brand-accent flex items-center justify-center text-xl">🎖️</div>
               <h4 className="font-display font-bold text-lg text-white">Licensed Riggers</h4>
               <p className="text-xs text-slate-400 leading-relaxed font-sans">
                 All high-elevation safety rope fitments are executed by technicians certified in active safety harnesses and fall arresters.

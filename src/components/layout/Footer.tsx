@@ -2,6 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, MapPin, Award, CheckCircle } from 'lucide-react';
 
+const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -22,11 +41,11 @@ export const Footer: React.FC = () => {
   ];
 
   const coverageAreas = [
-    'Bangalore / Bengaluru',
-    'Chennai / Madras',
-    'Hyderabad / Secunderabad',
-    'Mysore / Mysuru',
-    'Coimbatore & Salem',
+    'East Bangalore (Whitefield, Bellandur, HSR)',
+    'South Bangalore (Jayanagar, JP Nagar, E-City)',
+    'North Bangalore (Hebbal, Yelahanka, Vidyaranyapura)',
+    'West Bangalore (RR Nagar, Rajajinagar, Kengeri)',
+    'Central Bangalore (Indiranagar, Malleshwaram)',
   ];
 
   return (
@@ -36,12 +55,10 @@ export const Footer: React.FC = () => {
         {/* Brand Column */}
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-white text-brand-primary rounded-xl flex items-center justify-center font-display font-extrabold text-lg">
-              D
-            </div>
+            <img src="/logo.jpeg" alt="Druva Safety Nets" className="w-9 h-9 rounded-xl object-cover shadow border border-slate-700 bg-white animate-mover" />
             <div className="flex flex-col">
               <span className="font-display font-bold text-white text-base leading-tight uppercase tracking-wider">
-                Dhruva Safety Nets
+                Druva Safety Nets
               </span>
               <span className="text-[8px] uppercase tracking-widest text-slate-400 font-bold">
                 Architectural Safety Systems
@@ -51,6 +68,17 @@ export const Footer: React.FC = () => {
           <p className="text-sm text-slate-400 font-sans leading-relaxed">
             South India's premier provider of high-tension balcony netting and marine-grade stainless steel invisible grills. Certified high-rise engineering safety standards.
           </p>
+          <div className="flex items-center gap-3">
+            <a 
+              href="https://www.instagram.com/druva_safety_nets?igsh=MTM3dHhhbXVveHhxdg==" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-all duration-200 hover:border-slate-700"
+              title="Follow Druva Safety Nets on Instagram"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+          </div>
           <div className="flex flex-col gap-2 mt-2">
             <div className="flex items-center gap-2 text-xs font-medium text-slate-400">
               <Award className="w-4 h-4 text-amber-500 shrink-0" />
@@ -69,7 +97,7 @@ export const Footer: React.FC = () => {
           <ul className="flex flex-col gap-2.5 text-sm">
             {birdSafetySlugs.map((slug) => (
               <li key={slug.path}>
-                <Link to={slug.path} className="hover:text-amber-400 transition-colors duration-150">
+                <Link to={slug.path} className="hover:text-white transition-colors duration-150">
                   {slug.name}
                 </Link>
               </li>
@@ -83,7 +111,7 @@ export const Footer: React.FC = () => {
           <ul className="flex flex-col gap-2.5 text-sm">
             {grillSportsSlugs.map((slug) => (
               <li key={slug.path}>
-                <Link to={slug.path} className="hover:text-amber-400 transition-colors duration-150">
+                <Link to={slug.path} className="hover:text-white transition-colors duration-150">
                   {slug.name}
                 </Link>
               </li>
@@ -97,7 +125,7 @@ export const Footer: React.FC = () => {
           <ul className="flex flex-col gap-2.5 text-sm text-slate-400">
             {coverageAreas.map((area) => (
               <li key={area} className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-brand-accent shrink-0" />
                 <span>{area}</span>
               </li>
             ))}
@@ -117,7 +145,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div className="flex items-center gap-2">
           <CheckCircle className="w-4 h-4 text-slate-600" />
-          <span>© {currentYear} Dhruva Safety Nets. All rights reserved.</span>
+          <span>© {currentYear} Druva Safety Nets. All rights reserved.</span>
         </div>
         <div className="flex items-center gap-6">
           <Link to="/about" className="hover:underline">About Company</Link>

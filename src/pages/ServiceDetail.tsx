@@ -25,12 +25,12 @@ export const ServiceDetail: React.FC = () => {
   }
 
   const triggerWhatsAppWithService = () => {
-    const textMessage = `Hello Dhruva Safety Nets, I am visiting your website and would like to get more information, view samples, or schedule a free site inspection for:\n` +
+    const textMessage = `Hello Druva Safety Nets, I am visiting your website and would like to get more information, view samples, or schedule a free site inspection for:\n` +
       `- Service: ${service.title}\n\n` +
       `Please contact me to arrange details. Thank you!`;
 
     const encodedText = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+919980493004&text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+917989612281&text=${encodedText}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -50,9 +50,9 @@ export const ServiceDetail: React.FC = () => {
 
       {/* Hero Header */}
       <section className="bg-slate-900 text-white py-16 md:py-24 px-6 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.06),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(142,152,165,0.06),transparent_70%)]"></div>
         <div className="max-w-4xl mx-auto flex flex-col items-start gap-4 relative z-10">
-          <span className="bg-white/5 border border-white/10 px-3.5 py-1 rounded-full text-[10px] font-display font-extrabold text-amber-400 uppercase tracking-widest">
+          <span className="bg-white/5 border border-white/10 px-3.5 py-1 rounded-full text-[10px] font-display font-extrabold text-brand-accent uppercase tracking-widest">
             {service.categoryLabel}
           </span>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
@@ -85,7 +85,7 @@ export const ServiceDetail: React.FC = () => {
                 key={idx}
                 className="bg-white rounded-2xl p-5 border border-slate-100/80 shadow-sm flex items-center gap-3.5"
               >
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">🛡️</div>
+                <div className="w-10 h-10 rounded-xl bg-red-50 text-brand-primary flex items-center justify-center shrink-0">🛡️</div>
                 <span className="font-display font-bold text-sm text-brand-primary leading-tight">{feat}</span>
               </div>
             ))}
@@ -94,7 +94,7 @@ export const ServiceDetail: React.FC = () => {
           {/* Structural Specifications */}
           <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-sm flex flex-col gap-6">
             <div className="flex items-center gap-3 border-b border-slate-50 pb-4">
-              <FileText className="w-5 h-5 text-amber-500" />
+              <FileText className="w-5 h-5 text-brand-primary" />
               <h3 className="font-display font-bold text-lg text-brand-primary">Technical Material Specifications</h3>
             </div>
             
@@ -122,7 +122,7 @@ export const ServiceDetail: React.FC = () => {
           {service.faqs && service.faqs.length > 0 && (
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-amber-500" />
+                <HelpCircle className="w-5 h-5 text-brand-primary" />
                 <h3 className="font-display font-bold text-lg text-brand-primary">Specific Questions on {service.title}</h3>
               </div>
               <Accordion items={service.faqs} />
@@ -137,7 +137,7 @@ export const ServiceDetail: React.FC = () => {
           {/* Quick Call Out CTA Box */}
           <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 border border-white/10 shadow-xl flex flex-col gap-5">
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400 font-display">Fast Dispatch</span>
+              <span className="text-[10px] uppercase font-bold tracking-wider text-brand-accent font-display">Fast Dispatch</span>
               <h3 className="font-display font-bold text-xl text-white">Free Site Measurement Inspection</h3>
             </div>
             
@@ -150,10 +150,10 @@ export const ServiceDetail: React.FC = () => {
                 Book Inspection
               </Button>
               
-              <a href="tel:9980493004" className="w-full">
+              <a href="tel:7989612281" className="w-full">
                 <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/5">
-                  <PhoneCall className="w-4 h-4 mr-2 text-amber-500" />
-                  +91 9980493004
+                  <PhoneCall className="w-4 h-4 mr-2 text-brand-accent" />
+                  +91 79896 12281
                 </Button>
               </a>
             </div>

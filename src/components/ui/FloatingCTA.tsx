@@ -1,5 +1,24 @@
 import React from 'react';
-import { Phone, MessageSquare, Mail } from 'lucide-react';
+import { Phone, MessageSquare } from 'lucide-react';
+
+const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 
 export const FloatingCTA: React.FC = () => {
   return (
@@ -7,9 +26,9 @@ export const FloatingCTA: React.FC = () => {
       <div className="glass-card-dark rounded-full py-3.5 px-6 flex items-center justify-between shadow-2xl border border-white/10 gap-4">
         {/* Call Now */}
         <a 
-          href="tel:9980493004" 
-          className="flex items-center gap-2 text-white hover:text-amber-400 transition-colors duration-200"
-          title="Call Dhruva Safety Nets"
+          href="tel:7989612281" 
+          className="flex items-center gap-2 text-white hover:text-slate-300 transition-colors duration-200"
+          title="Call Druva Safety Nets"
         >
           <div className="w-8 h-8 rounded-full bg-red-500/25 text-red-400 flex items-center justify-center shrink-0 border border-red-500/20">
             <Phone className="w-4 h-4" />
@@ -22,7 +41,7 @@ export const FloatingCTA: React.FC = () => {
 
         {/* WhatsApp Chat */}
         <a 
-          href="https://api.whatsapp.com/send?phone=+919980493004&text=Hello Dhruva Safety Nets, I would like to get a quote and details for Safety Nets / Invisible Grills." 
+          href="https://api.whatsapp.com/send?phone=+917989612281&text=Hello Druva Safety Nets, I would like to get a quote and details for Safety Nets / Invisible Grills." 
           className="flex items-center gap-2 text-white hover:text-green-400 transition-colors duration-200"
           target="_blank"
           rel="noopener noreferrer"
@@ -37,16 +56,18 @@ export const FloatingCTA: React.FC = () => {
         {/* Vertical Separator */}
         <div className="h-5 w-px bg-white/10"></div>
 
-        {/* Email Inquiry */}
+        {/* Instagram Inquiry */}
         <a 
-          href="mailto:dhruvasafetynets@gmail.com" 
-          className="flex items-center gap-2 text-white hover:text-amber-400 transition-colors duration-200"
-          title="Email Dhruva Safety Nets"
+          href="https://www.instagram.com/druva_safety_nets?igsh=MTM3dHhhbXVveHhxdg==" 
+          className="flex items-center gap-2 text-white hover:text-pink-400 transition-colors duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Follow Druva Safety Nets on Instagram"
         >
-          <div className="w-8 h-8 rounded-full bg-slate-500/25 text-slate-300 flex items-center justify-center shrink-0 border border-slate-500/20">
-            <Mail className="w-4 h-4" />
+          <div className="w-8 h-8 rounded-full bg-pink-500/25 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/20">
+            <InstagramIcon className="w-4.5 h-4.5" />
           </div>
-          <span className="font-display font-bold text-xs tracking-wide uppercase hidden xs:inline">Email</span>
+          <span className="font-display font-bold text-xs tracking-wide uppercase hidden xs:inline">Instagram</span>
         </a>
       </div>
     </div>

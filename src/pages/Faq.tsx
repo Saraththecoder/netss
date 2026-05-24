@@ -10,7 +10,7 @@ export const Faq: React.FC = () => {
   const faqItems = [
     {
       category: 'materials',
-      question: 'What materials are used in Dhruva Safety Nets?',
+      question: 'What materials are used in Druva Safety Nets?',
       answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.'
     },
     {
@@ -56,9 +56,9 @@ export const Faq: React.FC = () => {
     <div className="flex flex-col w-full bg-slate-50/50">
       {/* 1. Header Banner */}
       <section className="bg-slate-900 text-white py-16 px-6 text-center relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.06),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(142,152,165,0.06),transparent_70%)]"></div>
         <div className="max-w-4xl mx-auto flex flex-col gap-3 relative z-10">
-          <span className="text-xs uppercase tracking-widest text-amber-500 font-extrabold font-display">Got Questions?</span>
+          <span className="text-xs uppercase tracking-widest text-brand-accent font-extrabold font-display">Got Questions?</span>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
             Safety FAQs Directory
           </h1>
@@ -137,10 +137,10 @@ export const Faq: React.FC = () => {
                 Connect with our local customer relations lead for immediate support or customized building estimates.
               </p>
             </div>
-            <a href="tel:9980493004">
+            <a href="tel:7989612281">
               <Button variant="whatsapp" className="whitespace-nowrap">
                 <PhoneCall className="w-4 h-4 mr-2" />
-                Call +91 9980493004
+                Call +91 79896 12281
               </Button>
             </a>
           </div>

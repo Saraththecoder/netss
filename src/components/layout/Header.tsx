@@ -3,6 +3,25 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 
+const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,17 +47,26 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      {/* Top Banner Bar */}
       <div className="bg-brand-primary text-white text-[11px] md:text-xs font-sans py-2 px-6 flex items-center justify-between tracking-wide font-medium">
         <div className="flex items-center gap-1.5 md:gap-3">
-          <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-amber-500" /> ISO Certified Materials</span>
+          <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-slate-300" /> ISO Certified Materials</span>
           <span className="hidden sm:inline">|</span>
-          <span className="hidden sm:inline">📞 +91 99804 93004</span>
+          <span className="hidden sm:inline">📞 +91 79896 12281</span>
         </div>
         <div className="flex items-center gap-3">
-          <a href="tel:9980493004" className="hover:text-amber-400 transition-colors">Call Support</a>
+          <a 
+            href="https://www.instagram.com/druva_safety_nets?igsh=MTM3dHhhbXVveHhxdg==" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-slate-300 transition-colors flex items-center gap-1.5"
+          >
+            <InstagramIcon className="w-3.5 h-3.5" />
+            <span className="hidden md:inline">Instagram</span>
+          </a>
           <span>|</span>
-          <span className="text-amber-400">★ 4.9 rated on Google</span>
+          <a href="tel:7989612281" className="hover:text-slate-300 transition-colors">Call Support</a>
+          <span>|</span>
+          <span className="text-slate-300">★ 4.9 rated on Google</span>
         </div>
       </div>
 
@@ -53,12 +81,10 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white font-display font-extrabold text-xl shadow">
-              D
-            </div>
+            <img src="/logo.jpeg" alt="Druva Safety Nets" className="w-10 h-10 rounded-xl object-cover shadow border border-slate-100" />
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-brand-primary text-base md:text-lg leading-tight uppercase tracking-wider">
-                Dhruva Safety Nets
+                Druva Safety Nets
               </span>
               <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold font-sans">
                 Architectural Safety Systems
@@ -86,13 +112,13 @@ export const Header: React.FC = () => {
           {/* Call Trigger CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <a 
-              href="tel:9980493004" 
+              href="tel:7989612281" 
               className="flex items-center gap-2 text-sm font-display font-bold text-slate-700 hover:text-brand-accent transition-colors"
             >
               <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
                 <Phone className="w-4 h-4" />
               </div>
-              +91 9980493004
+              +91 79896 12281
             </a>
             <Link to="/contact">
               <Button size="sm">Get Free Inspection</Button>
@@ -143,11 +169,11 @@ export const Header: React.FC = () => {
 
         <div className="flex flex-col gap-4 mt-auto pt-6 border-t border-slate-100">
           <a
-            href="tel:9980493004"
+            href="tel:7989612281"
             className="flex items-center gap-3 font-display font-extrabold text-brand-primary py-2.5 px-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all text-sm justify-center"
           >
             <Phone className="w-4 h-4 text-brand-accent" />
-            +91 9980493004
+            +91 79896 12281
           </a>
           <Link to="/contact" className="w-full" onClick={() => setIsOpen(false)}>
             <Button className="w-full" size="sm">Get Free Estimate</Button>
