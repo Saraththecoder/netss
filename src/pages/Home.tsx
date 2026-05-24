@@ -71,18 +71,16 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Right Media / Floating Glass Card */}
-          <div className="lg:col-span-5 relative w-full flex justify-center">
-            <div className="glass-card-dark rounded-3xl p-6 md:p-8 w-full border border-white/10 shadow-2xl relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-accent flex items-center justify-center font-display font-bold">⚡</div>
-                <div>
-                  <h3 className="font-display font-bold text-base text-white">Instant Online Quote</h3>
-                  <p className="text-[10px] text-slate-400 font-sans">Get budget calculations in 30 seconds</p>
-                </div>
+          {/* Hero Right Media / Quote Estimator */}
+          <div className="lg:col-span-5 relative w-full flex flex-col gap-4">
+            <div className="glass-card-dark rounded-2xl p-4 border border-white/10 shadow flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-accent flex items-center justify-center font-display font-bold">⚡</div>
+              <div>
+                <h3 className="font-display font-bold text-sm text-white">Instant Online Quote</h3>
+                <p className="text-[10px] text-slate-400 font-sans">Get budget calculations in 30 seconds</p>
               </div>
-              <QuoteForm />
             </div>
+            <QuoteForm />
           </div>
         </div>
       </section>

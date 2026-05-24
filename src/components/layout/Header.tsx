@@ -146,7 +146,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed top-[88px] bottom-0 right-0 z-30 w-72 bg-white border-l border-slate-100 shadow-2xl p-6 flex flex-col gap-6 lg:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed ${isScrolled ? 'top-[65px]' : 'top-[105px]'} bottom-0 right-0 z-30 w-72 bg-white border-l border-slate-100 shadow-2xl p-6 flex flex-col gap-6 lg:hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
