@@ -69,7 +69,7 @@ export const QuoteForm: React.FC = () => {
   };
 
   const triggerWhatsAppRedirect = () => {
-    const textMessage = `Hello Sanjay Safety Nets, I just generated an online estimate Quote:\n\n` +
+    const textMessage = `Hello Dhruva Safety Nets, I just generated an online estimate Quote:\n\n` +
       `- Category: ${formData.serviceCategory === 'bird-safety' ? 'Bird/Child Nets' : formData.serviceCategory === 'invisible-grill' ? 'Invisible Grills' : 'Sports/Industrial Nets'}\n` +
       `- Size: ${formData.customSize} Sq.Ft.\n` +
       `- City: ${formData.city}\n` +

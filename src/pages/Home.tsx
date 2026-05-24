@@ -8,7 +8,7 @@ import { Accordion } from '../components/ui/Accordion';
 
 export const Home: React.FC = () => {
   const homeFaqs = [
-    { question: 'What materials are used in Sanjay Safety Nets?', answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.' },
+    { question: 'What materials are used in Dhruva Safety Nets?', answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.' },
     { question: 'Do you offer a warranty on safety installations?', answer: 'Yes! We provide an official 5-Year Performance Warranty card covering color degradation, tensile strength decay, and hook structural stability under harsh outdoor sunlight and heavy rain.' },
     { question: 'How much time does it take to complete the installation?', answer: 'For standard residential balconies and window overlays, our certified high-rise technicians complete the full measurement and installation process in 1.5 to 3 hours.' },
     { question: 'Can these nets be customized for odd-shaped balconies?', answer: 'Absolutely. We custom cut, align, and tension the netting to accommodate any architectural curve, ventilation duct shaft, air conditioner unit framework, or open utility space.' }

@@ -30,7 +30,7 @@ One of the most dangerous, overlooked flaws of traditional metal grills is that 
 
 ### 4. Zero Maintenance & Rustproof Performance
 Unlike iron grills that require regular sanding, rust treatment, and painting, premium 316-grade stainless steel cables are highly resistant to saline winds and acidic rains, guaranteeing a lifetime of zero rust and zero maintenance.`,
-    author: 'Sanjay Kumar (UX & Security Strategist)',
+    author: 'Dhruva Kumar (UX & Security Strategist)',
     date: 'May 10, 2026',
     readTime: '4 min read',
     category: 'Home Security',

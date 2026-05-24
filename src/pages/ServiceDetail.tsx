@@ -25,7 +25,7 @@ export const ServiceDetail: React.FC = () => {
   }
 
   const triggerWhatsAppWithService = () => {
-    const textMessage = `Hello Sanjay Safety Nets, I am visiting your website and would like to get more information, view samples, or schedule a free site inspection for:\n` +
+    const textMessage = `Hello Dhruva Safety Nets, I am visiting your website and would like to get more information, view samples, or schedule a free site inspection for:\n` +
       `- Service: ${service.title}\n\n` +
       `Please contact me to arrange details. Thank you!`;
 

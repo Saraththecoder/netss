@@ -51,8 +51,8 @@ export const Contact: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Email Inquiry</span>
-                <a href="mailto:sanjaynets2025@gmail.com" className="text-base font-bold text-brand-primary hover:underline font-sans">
-                  sanjaynets2025@gmail.com
+                <a href="mailto:dhruvasafetynets@gmail.com" className="text-base font-bold text-brand-primary hover:underline font-sans">
+                  dhruvasafetynets@gmail.com
                 </a>
               </div>
             </div>

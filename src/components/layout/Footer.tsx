@@ -37,11 +37,11 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 bg-white text-brand-primary rounded-xl flex items-center justify-center font-display font-extrabold text-lg">
-              S
+              D
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-white text-base leading-tight uppercase tracking-wider">
-                Sanjay Safety Nets
+                Dhruva Safety Nets
               </span>
               <span className="text-[8px] uppercase tracking-widest text-slate-400 font-bold">
                 Architectural Safety Systems
@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div className="flex items-center gap-2">
           <CheckCircle className="w-4 h-4 text-slate-600" />
-          <span>© {currentYear} Sanjay Safety Nets. All rights reserved.</span>
+          <span>© {currentYear} Dhruva Safety Nets. All rights reserved.</span>
         </div>
         <div className="flex items-center gap-6">
           <Link to="/about" className="hover:underline">About Company</Link>

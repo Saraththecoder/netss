@@ -58,11 +58,11 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5">
             <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white font-display font-extrabold text-xl shadow">
-              S
+              D
             </div>
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-brand-primary text-base md:text-lg leading-tight uppercase tracking-wider">
-                Sanjay Safety Nets
+                Dhruva Safety Nets
               </span>
               <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold font-sans">
                 Architectural Safety Systems

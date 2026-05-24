@@ -10,7 +10,7 @@ export const Faq: React.FC = () => {
   const faqItems = [
     {
       category: 'materials',
-      question: 'What materials are used in Sanjay Safety Nets?',
+      question: 'What materials are used in Dhruva Safety Nets?',
       answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.'
     },
     {

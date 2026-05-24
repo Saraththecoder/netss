@@ -51,10 +51,10 @@ export const About: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <span className="text-xs uppercase tracking-widest text-slate-400 font-extrabold font-display">Who We Are</span>
             <h2 className="font-display font-black text-3xl text-brand-primary leading-tight">
-              Sanjay Safety Nets — Setting Standards in Home Protection
+              Dhruva Safety Nets — Setting Standards in Home Protection
             </h2>
             <p className="text-slate-600 font-sans text-sm sm:text-base leading-relaxed">
-              Founded as professional safety net dealers, Sanjay Safety Nets has evolved into South India's premier installer of high-performance architectural safeguards. Our primary mission is to protect urban families, toddlers, and pets from high-rise balcony hazards while solving bird hygiene challenges permanently.
+              Founded as professional safety net dealers, Dhruva Safety Nets has evolved into South India's premier installer of high-performance architectural safeguards. Our primary mission is to protect urban families, toddlers, and pets from high-rise balcony hazards while solving bird hygiene challenges permanently.
             </p>
             <p className="text-slate-600 font-sans text-sm sm:text-base leading-relaxed">
               We stand apart from local, uncertified contractors. Every rig, border cable, fastener, and monofilament mesh we supply undergoes rigorous stress-rupture audits. By integrating 316 Marine Grade Stainless Steel and UV-stabilized virgin polymer HDPE meshes, we deliver security that remains virtually invisible, preserving your skyline viewpoints.
