@@ -16,10 +16,6 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -133,6 +129,7 @@ export const Header: React.FC = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={() => setIsOpen(false)}
               className={`font-display text-base font-bold py-2 border-b border-slate-50 hover:text-brand-accent transition-colors ${
                 location.pathname === link.path 
                   ? 'text-brand-accent' 
@@ -152,7 +149,7 @@ export const Header: React.FC = () => {
             <Phone className="w-4 h-4 text-brand-accent" />
             +91 9980493004
           </a>
-          <Link to="/contact" className="w-full">
+          <Link to="/contact" className="w-full" onClick={() => setIsOpen(false)}>
             <Button className="w-full" size="sm">Get Free Estimate</Button>
           </Link>
         </div>

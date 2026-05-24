@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 interface BeforeAfterProps {
   beforeImage: string;
@@ -15,29 +15,30 @@ export const BeforeAfter: React.FC<BeforeAfterProps> = ({
 }) => {
   const [sliderPosition, setSliderPosition] = useState(50); // percentage (0-100)
   const [isDragging, setIsDragging] = useState(false);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (clientX: number) => {
+  const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const position = Math.max(0, Math.min(100, (x / rect.width) * 100));
     setSliderPosition(position);
-  };
+  }, []);
 
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     if (!isDragging) return;
     handleMove(e.touches[0].clientX);
-  };
+  }, [isDragging, handleMove]);
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDragging) return;
     handleMove(e.clientX);
-  };
+  }, [isDragging, handleMove]);
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setIsDragging(false);
-  };
+  }, []);
 
   useEffect(() => {
     if (isDragging) {
@@ -53,7 +54,24 @@ export const BeforeAfter: React.FC<BeforeAfterProps> = ({
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleMouseUp);
     };
-  }, [isDragging]);
+  }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove]);
+
+  // Track container width to ensure the "Before" image size remains constant and doesn't squeeze when cropped.
+  useEffect(() => {
+    if (!containerRef.current) return;
+    
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.getBoundingClientRect().width);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => {
+      window.removeEventListener('resize', updateWidth);
+    };
+  }, []);
 
   return (
     <div 
@@ -82,7 +100,7 @@ export const BeforeAfter: React.FC<BeforeAfterProps> = ({
           src={beforeImage} 
           alt="Before installation" 
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ width: containerRef.current?.getBoundingClientRect().width || '100vw' }}
+          style={{ width: containerWidth ? `${containerWidth}px` : '100vw' }}
           draggable={false}
         />
         <div className="absolute bottom-4 left-4 bg-red-600 text-white text-xs font-display font-semibold px-3 py-1.5 rounded-full shadow">
@@ -104,3 +122,4 @@ export const BeforeAfter: React.FC<BeforeAfterProps> = ({
     </div>
   );
 };
+
