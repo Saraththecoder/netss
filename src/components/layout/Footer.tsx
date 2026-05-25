@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, MapPin, Award, CheckCircle } from 'lucide-react';
+import { servicesData } from '../../data/servicesData';
 
 const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -24,20 +25,15 @@ const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const birdSafetySlugs = [
-    { name: 'Balcony Safety Nets', path: '/services/balcony-safety-nets' },
-    { name: 'Kids Nets for Balcony', path: '/services/kids-net-for-balcony' },
-    { name: 'Pets Safety Nets', path: '/services/pets-safety-nets' },
-    { name: 'Pigeon Safety Nets', path: '/services/pigeon-safety-nets' },
-    { name: 'Duct Area Nets', path: '/services/duct-area-safety-nets' },
-  ];
+  // Split the 16 services dynamically and balance them (8 in Column 1, 8 in Column 2)
+  const birdSafetySlugs = servicesData
+    .filter(s => s.category === 'bird-safety')
+    .slice(0, 8)
+    .map(s => ({ name: s.title, path: `/services/${s.slug}` }));
 
   const grillSportsSlugs = [
-    { name: 'Invisible Grill Systems', path: '/services/invisible-grill-nets' },
-    { name: 'Invisible Grills for Balcony', path: '/services/invisible-grill-nets-for-balcony' },
-    { name: 'Cricket Practice Nets', path: '/services/cricket-practice-nets' },
-    { name: 'Rooftop Sports Nets', path: '/services/terrace-cricket-nets' },
-    { name: 'Industrial Safety Nets', path: '/services/industrial-safety-nets' },
+    ...servicesData.filter(s => s.category === 'bird-safety').slice(8).map(s => ({ name: s.title, path: `/services/${s.slug}` })),
+    ...servicesData.filter(s => s.category === 'invisible-grill' || s.category === 'sports-industrial').map(s => ({ name: s.title, path: `/services/${s.slug}` }))
   ];
 
   const coverageAreas = [
@@ -61,7 +57,7 @@ export const Footer: React.FC = () => {
                 Druva Safety Nets
               </span>
               <span className="text-[8px] uppercase tracking-widest text-slate-400 font-bold">
-                Architectural Safety Systems
+                Pigeon Nets & Invisible Grills
               </span>
             </div>
           </div>
@@ -93,7 +89,7 @@ export const Footer: React.FC = () => {
 
         {/* Column 2: Bird Nets Services */}
         <div className="flex flex-col gap-4">
-          <h4 className="font-display font-bold text-white tracking-wider text-sm uppercase">Bird & Child Protection</h4>
+          <h4 className="font-display font-bold text-white tracking-wider text-sm uppercase">Bird & Child Safety</h4>
           <ul className="flex flex-col gap-2.5 text-sm">
             {birdSafetySlugs.map((slug) => (
               <li key={slug.path}>
@@ -107,7 +103,7 @@ export const Footer: React.FC = () => {
 
         {/* Column 3: Grills & Sports */}
         <div className="flex flex-col gap-4">
-          <h4 className="font-display font-bold text-white tracking-wider text-sm uppercase">Grills & Sports nets</h4>
+          <h4 className="font-display font-bold text-white tracking-wider text-sm uppercase">Grills, Sports & Utilities</h4>
           <ul className="flex flex-col gap-2.5 text-sm">
             {grillSportsSlugs.map((slug) => (
               <li key={slug.path}>

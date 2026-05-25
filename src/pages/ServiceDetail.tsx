@@ -70,6 +70,19 @@ export const ServiceDetail: React.FC = () => {
         {/* Detail Content Column Left */}
         <div className="lg:col-span-8 flex flex-col gap-10">
           
+          {/* Service Image Banner */}
+          {service.image && (
+            <div className="relative h-64 sm:h-96 w-full rounded-3xl overflow-hidden shadow-lg border border-slate-100/80">
+              <img 
+                src={service.image} 
+                alt={service.title} 
+                className="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-750 ease-out"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent"></div>
+            </div>
+          )}
+
           {/* Detailed Paragraph Copy */}
           <div className="flex flex-col gap-4">
             <h2 className="font-display font-black text-2xl md:text-3xl text-brand-primary">Architectural Safety & Performance</h2>

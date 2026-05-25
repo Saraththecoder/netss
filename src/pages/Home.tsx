@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, PhoneCall, ArrowRight, Star } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { BeforeAfter } from '../components/ui/BeforeAfter';
 import { QuoteForm } from '../components/ui/QuoteForm';
 import { Accordion } from '../components/ui/Accordion';
+import { servicesData } from '../data/servicesData';
+
+type CategoryType = 'all' | 'bird-safety' | 'invisible-grill' | 'sports-industrial';
 
 export const Home: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
+  const [searchText, setSearchText] = useState('');
+
+  const categoriesList: { value: CategoryType; label: string }[] = [
+    { value: 'all', label: 'All Services' },
+    { value: 'bird-safety', label: 'Bird & Child Safety Nets' },
+    { value: 'invisible-grill', label: 'Invisible Grill Systems' },
+    { value: 'sports-industrial', label: 'Sports & Industrial Rigging' }
+  ];
+
+  const filteredServices = servicesData.filter((service) => {
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchText.toLowerCase()) || 
+                          service.tagline.toLowerCase().includes(searchText.toLowerCase()) || 
+                          service.description.toLowerCase().includes(searchText.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   const homeFaqs = [
     { question: 'What materials are used in Druva Safety Nets?', answer: 'We use 100% Virgin High-Density Polyethylene (HDPE) and UV-stabilized copolymer nylon netting, combined with SS-304/316 grade stainless steel anchors, hooks, and tensioning cords. This ensures zero rust, high tensile breaking strength (up to 400+ kg for invisible grills), and long-lasting durability.' },
     { question: 'Do you offer a warranty on safety installations?', answer: 'Yes! We provide an official 5-Year Performance Warranty card covering color degradation, tensile strength decay, and hook structural stability under harsh outdoor sunlight and heavy rain.' },
@@ -28,15 +48,15 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold font-sans tracking-wide text-brand-accent">
               <Star className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
-              <span>South India's Most Trusted Safety Installer</span>
+              <span>South India's Most Trusted Safety Installer - <strong>DRUVA Safety Nets</strong></span>
             </div>
             
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
-              Architectural <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-300 to-slate-400">Safety Systems</span> for Modern Living
+              Pigeon Nets & <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-300 to-slate-400">Invisible Grills</span>
             </h1>
             
             <p className="font-sans text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-              Replace bulky iron grates. Protect your children and pets with premium high-tensile safety netting and marine-grade stainless steel invisible grills. 100% natural views, zero compromises.
+              Replace bulky iron grates. Protect your children and pets with premium high-tensile <strong>DRUVA Safety Nets</strong> and marine-grade stainless steel invisible grills. 100% natural views, zero compromises.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
@@ -92,7 +112,7 @@ export const Home: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-4">
             <span className="text-xs uppercase tracking-widest text-slate-400 font-extrabold font-display">Specialized Offerings</span>
             <h2 className="font-display font-black text-3xl sm:text-4xl text-brand-primary leading-tight">
-              Architectural Safety Pillars
+              Premium Safety Pillars
             </h2>
             <p className="text-slate-500 font-sans text-sm sm:text-base leading-relaxed">
               We fabricate and rig custom high-strength netting and premium stainless-steel grill wire systems engineered for modern residences.
@@ -105,7 +125,7 @@ export const Home: React.FC = () => {
               <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center text-xl text-brand-primary">🕸️</div>
               <h3 className="font-display font-bold text-xl text-brand-primary">Bird & Child Safety Nets</h3>
               <p className="text-slate-500 font-sans text-sm leading-relaxed">
-                UV-stabilized virgin HDPE safety nets custom-measured for balcony fall prevention, pigeon protection, pet safeguards, and utility shafts.
+                UV-stabilized virgin HDPE safety nets custom-measured for balcony fall prevention, pigeon protection, pet safeguards, and utility shafts by <strong>DRUVA Safety Nets</strong>.
               </p>
               <ul className="flex flex-col gap-2.5 text-xs text-slate-500 font-sans mt-2">
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" /> Balcony Safety Netting</li>
@@ -155,51 +175,120 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Before/After Interactive Comparison Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* 2.5 Dynamic Services Category Explorer */}
+      <section className="py-20 px-6 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto flex flex-col gap-12">
           
-          {/* Text Left */}
-          <div className="lg:col-span-5 flex flex-col items-start gap-6">
-            <span className="text-xs uppercase tracking-widest text-slate-400 font-extrabold font-display">Visual Proof</span>
+          <div className="text-center max-w-2xl mx-auto flex flex-col gap-4">
+            <span className="text-xs uppercase tracking-widest text-slate-400 font-extrabold font-display">Interactive Catalog</span>
             <h2 className="font-display font-black text-3xl sm:text-4xl text-brand-primary leading-tight">
-              Breathtaking Balcony Transformation
+              Explore Our Full Safety Range
             </h2>
             <p className="text-slate-500 font-sans text-sm sm:text-base leading-relaxed">
-              Don't compromise your luxury high-rise view with ugly iron bar cages or deal with constant unhygienic pigeon roosting. 
+              Browse our complete selection of 16 high-strength safety nets, invisible window grills, and sports/industrial netting solutions. Filter by category or search instantly.
             </p>
-            <p className="text-slate-500 font-sans text-sm sm:text-base leading-relaxed">
-              Our professional thin-mesh installations provide absolute security against bird nesting and high-floor falls while staying practically invisible from a distance.
-            </p>
-            
-            <div className="flex flex-col gap-3 mt-2 w-full">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center"><CheckCircle2 className="w-3.5 h-3.5" /></div>
-                <span className="text-sm font-semibold text-slate-700 font-sans">Allows 100% natural breeze and sunlight</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center"><CheckCircle2 className="w-3.5 h-3.5" /></div>
-                <span className="text-sm font-semibold text-slate-700 font-sans">Maintains home premium facade value</span>
-              </div>
-            </div>
-            
-            <Link to="/gallery" className="mt-2">
-              <Button variant="outline">Browse Gallery</Button>
-            </Link>
           </div>
 
-          {/* Slider Right */}
-          <div className="lg:col-span-7 w-full">
-            <BeforeAfter 
-              beforeImage="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop" 
-              afterImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
-              beforeLabel="Bare Balcony (Vulnerable to Birds & Falls)"
-              afterLabel="Tension-Fit Safety Installation"
-            />
+          {/* Interactive Filtering Tabs & Search Bar */}
+          <div className="flex flex-col xl:flex-row gap-6 justify-between items-center bg-slate-50 p-4 rounded-3xl border border-slate-100/80">
+            {/* Category Tabs */}
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categoriesList.map((cat) => (
+                <button 
+                  key={cat.value}
+                  onClick={() => setActiveCategory(cat.value)}
+                  className={`px-4 py-2.5 rounded-xl font-display font-bold text-xs tracking-wide transition-all ${activeCategory === cat.value ? 'bg-brand-primary text-white shadow-md' : 'text-slate-600 hover:bg-slate-200/50'}`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Search Input */}
+            <div className="relative w-full xl:w-80 shrink-0">
+              <input 
+                type="text" 
+                placeholder="Search safety nets..."
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                className="w-full px-5 py-2.5 pl-11 rounded-2xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary font-sans text-sm text-slate-700 shadow-sm"
+              />
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">🔍</span>
+              {searchText && (
+                <button 
+                  onClick={() => setSearchText('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-sm font-semibold font-sans"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
+
+          {/* Dynamic Grid Results */}
+          {filteredServices.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredServices.map((service) => (
+                <div 
+                  key={service.slug}
+                  className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-md shadow-slate-100 hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full"
+                >
+                  {/* Service Card Image */}
+                  <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm border border-slate-100 px-2.5 py-1 rounded-xl text-[10px] font-display font-extrabold uppercase tracking-wider text-brand-primary shadow-sm max-w-[85%] truncate">
+                      {service.categoryLabel}
+                    </div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-6 flex flex-col flex-1 gap-3.5">
+                    <h3 className="font-display font-black text-lg text-brand-primary leading-snug">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-500 font-sans text-xs sm:text-sm leading-relaxed line-clamp-3">
+                      {service.tagline}
+                    </p>
+                    <div className="flex flex-col gap-1 border-t border-slate-50 pt-3 mt-auto">
+                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-display">Starting Price</span>
+                      <span className="font-sans font-extrabold text-brand-primary text-sm">{service.priceIndicator}</span>
+                    </div>
+                    <Link 
+                      to={`/services/${service.slug}`}
+                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-slate-50 text-brand-primary hover:bg-brand-primary hover:text-white font-display font-bold text-xs rounded-xl tracking-wide transition-all mt-2 border border-slate-100"
+                    >
+                      <span>Explore Technical Details</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 flex flex-col items-center gap-4 bg-slate-50 rounded-3xl border border-dashed border-slate-200">
+              <span className="text-4xl">🔎</span>
+              <h3 className="font-display font-bold text-lg text-brand-primary">No Matching Services Found</h3>
+              <p className="text-slate-500 font-sans text-sm leading-relaxed max-w-md">
+                We couldn't find any safety nets or grills matching your search. Try adjusting your category filters or search keywords.
+              </p>
+              <button 
+                onClick={() => { setActiveCategory('all'); setSearchText(''); }}
+                className="mt-2 px-5 py-2 bg-brand-primary text-white rounded-xl font-display font-bold text-sm hover:bg-brand-primary/95 transition-all"
+              >
+                Reset Search Filters
+              </button>
+            </div>
+          )}
 
         </div>
       </section>
+
+
 
       {/* 4. Trust Signals & Material Standards */}
       <section className="py-20 px-6 bg-slate-900 text-white relative">

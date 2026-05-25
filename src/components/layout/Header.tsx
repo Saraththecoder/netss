@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <div className="bg-brand-primary text-white text-[11px] md:text-xs font-sans py-2 px-6 flex items-center justify-between tracking-wide font-medium">
+      <div className="bg-brand-primary text-white text-[10px] sm:text-[11px] md:text-xs font-sans py-2 px-4 sm:px-6 flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-1 tracking-wide font-medium">
         <div className="flex items-center gap-1.5 md:gap-3">
           <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-slate-300" /> ISO Certified Materials</span>
           <span className="hidden sm:inline">|</span>
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
                 Druva Safety Nets
               </span>
               <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold font-sans">
-                Architectural Safety Systems
+                Pigeon Nets & Invisible Grills
               </span>
             </div>
           </Link>
@@ -139,17 +139,35 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-30 bg-brand-primary/20 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-brand-primary/40 backdrop-blur-xs lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed ${isScrolled ? 'top-[65px]' : 'top-[105px]'} bottom-0 right-0 z-30 w-72 bg-white border-l border-slate-100 shadow-2xl p-6 flex flex-col gap-6 lg:hidden transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 bottom-0 right-0 z-50 w-80 max-w-[85vw] bg-white border-l border-slate-100 shadow-2xl p-6 flex flex-col gap-6 lg:hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
+            <img src="/logo.jpeg" alt="Druva Safety Nets" className="w-8 h-8 rounded-xl object-cover shadow border border-slate-100" />
+            <div className="flex flex-col">
+              <span className="font-display font-bold text-brand-primary text-xs uppercase tracking-wider">
+                Druva Safety Nets
+              </span>
+            </div>
+          </Link>
+          <button 
+            onClick={() => setIsOpen(false)} 
+            className="p-1.5 rounded-lg hover:bg-slate-50 text-slate-400 hover:text-slate-600 transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
         <div className="flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
