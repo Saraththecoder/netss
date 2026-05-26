@@ -33,7 +33,7 @@ export const FloatingCTA: React.FC = () => {
           <div className="w-8 h-8 rounded-full bg-red-500/25 text-red-400 flex items-center justify-center shrink-0 border border-red-500/20">
             <Phone className="w-4 h-4" />
           </div>
-          <span className="font-display font-bold text-xs tracking-wide uppercase hidden xs:inline">Call Now</span>
+          <span className="font-display font-bold text-xs tracking-wide uppercase hidden sm:inline whitespace-nowrap">Call Now</span>
         </a>
 
         {/* Vertical Separator */}
@@ -50,7 +50,7 @@ export const FloatingCTA: React.FC = () => {
           <div className="w-8 h-8 rounded-full bg-green-500/25 text-green-400 flex items-center justify-center shrink-0 border border-green-500/20 animate-pulse">
             <MessageSquare className="w-4 h-4" />
           </div>
-          <span className="font-display font-bold text-xs tracking-wide uppercase">WhatsApp</span>
+          <span className="font-display font-bold text-xs tracking-wide uppercase whitespace-nowrap">WhatsApp</span>
         </a>
 
         {/* Vertical Separator */}
@@ -67,7 +67,7 @@ export const FloatingCTA: React.FC = () => {
           <div className="w-8 h-8 rounded-full bg-pink-500/25 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/20">
             <InstagramIcon className="w-4.5 h-4.5" />
           </div>
-          <span className="font-display font-bold text-xs tracking-wide uppercase hidden xs:inline">Instagram</span>
+          <span className="font-display font-bold text-xs tracking-wide uppercase hidden sm:inline whitespace-nowrap">Instagram</span>
         </a>
       </div>
     </div>
