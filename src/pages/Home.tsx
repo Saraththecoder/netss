@@ -161,10 +161,10 @@ export const Home: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:7989612281" className="w-full sm:w-auto">
+            <a href="tel:7204244011" className="w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
                 <PhoneCall className="w-5 h-5 mr-2 text-brand-accent" />
-                +91 79896 12281
+                +91 72042 44011
               </Button>
             </a>
           </div>
@@ -345,7 +345,7 @@ export const Home: React.FC = () => {
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <a 
-                        href="tel:7989612281"
+                        href="tel:7204244011"
                         className="inline-flex items-center justify-center gap-1.5 py-2.5 px-4 bg-brand-primary text-white hover:bg-slate-800 font-display font-bold text-xs rounded-xl transition-all shadow-sm"
                       >
                         <PhoneCall className="w-3.5 h-3.5" />

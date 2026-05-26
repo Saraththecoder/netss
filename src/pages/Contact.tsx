@@ -63,8 +63,8 @@ export const Contact: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Direct Hotline</span>
-                <a href="tel:7989612281" className="text-base font-bold text-brand-primary hover:underline font-display">
-                  +91 79896 12281
+                <a href="tel:7204244011" className="text-base font-bold text-brand-primary hover:underline font-display">
+                  +91 72042 44011
                 </a>
                 <span className="text-[10px] text-slate-400 font-sans">Free consulting and sample displays</span>
               </div>

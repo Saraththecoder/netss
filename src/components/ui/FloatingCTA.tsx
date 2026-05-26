@@ -26,7 +26,7 @@ export const FloatingCTA: React.FC = () => {
       <div className="glass-card-dark rounded-full py-3.5 px-6 flex items-center justify-between shadow-2xl border border-white/10 gap-4">
         {/* Call Now */}
         <a 
-          href="tel:7989612281" 
+          href="tel:7204244011" 
           className="flex items-center gap-2 text-white hover:text-slate-300 transition-colors duration-200"
           title="Call Druva Safety Nets"
         >
@@ -41,7 +41,7 @@ export const FloatingCTA: React.FC = () => {
 
         {/* WhatsApp Chat */}
         <a 
-          href="https://api.whatsapp.com/send?phone=+917989612281&text=Hello Druva Safety Nets, I would like to get a quote and details for Safety Nets / Invisible Grills." 
+          href="https://api.whatsapp.com/send?phone=+917204244011&text=Hello Druva Safety Nets, I would like to get a quote and details for Safety Nets / Invisible Grills." 
           className="flex items-center gap-2 text-white hover:text-green-400 transition-colors duration-200"
           target="_blank"
           rel="noopener noreferrer"

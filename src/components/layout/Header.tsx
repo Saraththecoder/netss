@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-1.5 md:gap-3 flex-wrap justify-center sm:justify-start">
           <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-slate-300" /> ISO Certified Materials</span>
           <span className="hidden sm:inline">|</span>
-          <span className="hidden sm:inline">📞 +91 79896 12281</span>
+          <span className="hidden sm:inline">📞 +91 72042 44011</span>
           <span className="hidden lg:inline">|</span>
           <a href="mailto:Druvasafetynets@gmail.com" className="hidden lg:inline hover:text-slate-300 transition-colors">✉ Druvasafetynets@gmail.com</a>
         </div>
@@ -66,7 +66,7 @@ export const Header: React.FC = () => {
             <span className="hidden md:inline">Instagram</span>
           </a>
           <span>|</span>
-          <a href="tel:7989612281" className="hover:text-slate-300 transition-colors">Call Support</a>
+          <a href="tel:7204244011" className="hover:text-slate-300 transition-colors">Call Support</a>
           <span>|</span>
           <span className="text-slate-300">★ 4.9 rated on Google</span>
         </div>
@@ -114,13 +114,13 @@ export const Header: React.FC = () => {
           {/* Call Trigger CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <a 
-              href="tel:7989612281" 
+              href="tel:7204244011" 
               className="flex items-center gap-2 text-sm font-display font-bold text-slate-700 hover:text-brand-accent transition-colors"
             >
               <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
                 <Phone className="w-4 h-4" />
               </div>
-              +91 79896 12281
+              +91 72042 44011
             </a>
             <Link to="/contact">
               <Button size="sm">Get Free Inspection</Button>
@@ -189,11 +189,11 @@ export const Header: React.FC = () => {
 
         <div className="flex flex-col gap-4 mt-auto pt-6 border-t border-slate-100">
           <a
-            href="tel:7989612281"
+            href="tel:7204244011"
             className="flex items-center gap-3 font-display font-extrabold text-brand-primary py-2.5 px-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all text-sm justify-center"
           >
             <Phone className="w-4 h-4 text-brand-accent" />
-            +91 79896 12281
+            +91 72042 44011
           </a>
           <Link to="/contact" className="w-full" onClick={() => setIsOpen(false)}>
             <Button className="w-full" size="sm">Get Free Estimate</Button>

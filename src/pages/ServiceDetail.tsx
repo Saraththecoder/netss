@@ -37,7 +37,7 @@ export const ServiceDetail: React.FC = () => {
       `Please contact me to arrange details. Thank you!`;
 
     const encodedText = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+917989612281&text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+917204244011&text=${encodedText}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -170,10 +170,10 @@ export const ServiceDetail: React.FC = () => {
                 Book Inspection
               </Button>
               
-              <a href="tel:7989612281" className="w-full">
+              <a href="tel:7204244011" className="w-full">
                 <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/5">
                   <PhoneCall className="w-4 h-4 mr-2 text-brand-accent" />
-                  +91 79896 12281
+                  +91 72042 44011
                 </Button>
               </a>
             </div>

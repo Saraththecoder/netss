@@ -143,10 +143,10 @@ export const Faq: React.FC = () => {
                 Connect with our local customer relations lead for immediate support or customized building estimates.
               </p>
             </div>
-            <a href="tel:7989612281">
+            <a href="tel:7204244011">
               <Button variant="whatsapp" className="whitespace-nowrap">
                 <PhoneCall className="w-4 h-4 mr-2" />
-                Call +91 79896 12281
+                Call +91 72042 44011
               </Button>
             </a>
           </div>
