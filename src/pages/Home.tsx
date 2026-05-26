@@ -43,81 +43,63 @@ export const Home: React.FC = () => {
     <div className="flex flex-col w-full overflow-hidden">
       
       {/* 1. Hero Section (Ultra-Premium Architectural Theme) */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-[#0d1527] to-[#040814] text-white py-20 lg:py-32 px-6 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-900 via-[#0d1527] to-[#040814] text-white py-20 lg:py-28 px-6 overflow-hidden">
         {/* Background visual graphics */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.08),transparent_50%)]"></div>
         <div className="absolute -left-40 top-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]"></div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          {/* Hero Left Content */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold font-sans tracking-wide text-brand-accent">
-              <Star className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
-              <span>South India's Most Trusted Safety Installer - <strong>DRUVA Safety Nets</strong></span>
-            </div>
-            
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
-              Pigeon Nets & <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-300 to-slate-400">Invisible Grills</span>
-            </h1>
-            
-            <p className="font-sans text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-              Replace bulky iron grates. Protect your children and pets with premium high-tensile <strong>DRUVA Safety Nets</strong> and marine-grade stainless steel invisible grills. 100% natural views, zero compromises.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
-              <Link to="/contact">
-                <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                  Book Free Site Visit
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              <a href="tel:7989612281">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
-                  <PhoneCall className="w-5 h-5 mr-2 text-brand-accent" />
-                  +91 79896 12281
-                </Button>
-              </a>
-            </div>
-
-            {/* Quick Metrics */}
-            <div className="grid grid-cols-3 gap-6 md:gap-10 border-t border-white/10 pt-8 mt-4 w-full">
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">12,000+</span>
-                <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Homes Protected</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">5 Years</span>
-                <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Full Warranty</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">Same-Day</span>
-                <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Fast Execution</span>
-              </div>
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold font-sans tracking-wide text-brand-accent">
+            <Star className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
+            <span>South India's Most Trusted Safety Installer - <strong>DRUVA Safety Nets</strong></span>
+          </div>
+          
+          {/* Main Visual Image Banner replacing the header/text */}
+          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-64 sm:h-96 w-full bg-slate-950/20 max-w-3xl">
+            <img 
+              src="/home.jpeg" 
+              alt="Druva Safety Nets Balcony Installation" 
+              className="w-full h-full object-cover transition-transform duration-[1000ms] hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 right-6 text-left flex flex-col gap-1.5">
+              <span className="self-start text-[10px] font-display font-extrabold text-brand-accent tracking-widest uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
+                Premium Fitment
+              </span>
+              <h2 className="font-display font-extrabold text-xl sm:text-2xl text-white tracking-tight leading-snug">
+                High-Rise Balcony Safety Nets & Invisible Grills
+              </h2>
             </div>
           </div>
 
-          {/* Hero Right Media / Showcase Card */}
-          <div className="lg:col-span-5 relative w-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] self-stretch">
-            <div className="absolute inset-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950/20">
-              <img 
-                src="/home.jpeg" 
-                alt="Druva Safety Nets Balcony Installation" 
-                className="w-full h-full object-cover transition-transform duration-[1000ms] hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
-              
-              {/* Architectural Overlay Information */}
-              <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-2.5">
-                <span className="self-start text-[10px] font-display font-extrabold text-brand-accent tracking-widest uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
-                  Premium Fitment
-                </span>
-                <h3 className="font-display font-extrabold text-xl text-white tracking-tight leading-snug">
-                  High-Rise Balcony Safety Nets
-                </h3>
-                <p className="font-sans text-xs text-slate-300 leading-relaxed">
-                  Heavy-gauge double-knotted monofilament safety structures professionally rigged with active high-elevation fall arresters. Zero viewpoints compromised.
-                </p>
-              </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto mt-2">
+            <Link to="/contact">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                Book Free Site Visit
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <a href="tel:7989612281">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
+                <PhoneCall className="w-5 h-5 mr-2 text-brand-accent" />
+                +91 79896 12281
+              </Button>
+            </a>
+          </div>
+
+          {/* Quick Metrics */}
+          <div className="grid grid-cols-3 gap-6 md:gap-10 border-t border-white/10 pt-8 mt-4 w-full">
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">12,000+</span>
+              <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Homes Protected</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">5 Years</span>
+              <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Full Warranty</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">Same-Day</span>
+              <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Fast Execution</span>
             </div>
           </div>
         </div>
