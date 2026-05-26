@@ -98,13 +98,17 @@ export const Home: React.FC = () => {
           </div>
 
           {/* Hero Right Media / Quote Estimator */}
-          <div className="lg:col-span-5 relative w-full flex flex-col gap-4">
-            <div className="glass-card-dark rounded-2xl p-4 border border-white/10 shadow flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-accent flex items-center justify-center font-display font-bold">⚡</div>
-              <div>
-                <h3 className="font-display font-bold text-sm text-white">Free Site Measurement</h3>
-                <p className="text-[10px] text-slate-400 font-sans">Schedule professional inspection in 30 seconds</p>
-              </div>
+          <div className="lg:col-span-5 relative w-full flex flex-col gap-5">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-lg h-44 w-full bg-slate-950/20">
+              <img 
+                src="/home.jpeg" 
+                alt="Druva Safety Nets Balcony Installation" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent"></div>
+              <span className="absolute bottom-3 left-4 text-xs font-display font-extrabold text-white tracking-wide uppercase bg-brand-primary/80 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                Our Balcony Netting Installation
+              </span>
             </div>
             <QuoteForm />
           </div>
