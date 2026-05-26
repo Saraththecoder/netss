@@ -122,12 +122,6 @@ export const Home: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-[4500ms] ease-out"
                   style={idx === currentSlide ? { transform: 'scale(1.05)', transition: 'transform 4500ms ease-out' } : undefined}
                 />
-                {/* Visual Title and Description Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/25 to-transparent z-15 flex flex-col justify-end p-6 md:p-10 text-left">
-                  <span className="text-[10px] uppercase font-extrabold tracking-widest text-brand-accent mb-1.5 font-display">Featured Installation</span>
-                  <h3 className="font-display font-extrabold text-lg md:text-2xl text-white leading-tight mb-2">{slide.title}</h3>
-                  <p className="font-sans text-xs md:text-sm text-slate-300 max-w-xl leading-relaxed">{slide.desc}</p>
-                </div>
               </div>
             ))}
 
