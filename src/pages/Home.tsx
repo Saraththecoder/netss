@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, PhoneCall, ArrowRight, Star } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { QuoteForm } from '../components/ui/QuoteForm';
 import { Accordion } from '../components/ui/Accordion';
 import { servicesData } from '../data/servicesData';
 import { useSEO } from '../hooks/useSEO';
@@ -97,20 +96,29 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Right Media / Quote Estimator */}
-          <div className="lg:col-span-5 relative w-full flex flex-col gap-5">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-lg h-44 w-full bg-slate-950/20">
+          {/* Hero Right Media / Showcase Card */}
+          <div className="lg:col-span-5 relative w-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] self-stretch">
+            <div className="absolute inset-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950/20">
               <img 
                 src="/home.jpeg" 
                 alt="Druva Safety Nets Balcony Installation" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-[1000ms] hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent"></div>
-              <span className="absolute bottom-3 left-4 text-xs font-display font-extrabold text-white tracking-wide uppercase bg-brand-primary/80 backdrop-blur-xs px-2.5 py-1 rounded-lg">
-                Our Balcony Netting Installation
-              </span>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+              
+              {/* Architectural Overlay Information */}
+              <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-2.5">
+                <span className="self-start text-[10px] font-display font-extrabold text-brand-accent tracking-widest uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
+                  Premium Fitment
+                </span>
+                <h3 className="font-display font-extrabold text-xl text-white tracking-tight leading-snug">
+                  High-Rise Balcony Safety Nets
+                </h3>
+                <p className="font-sans text-xs text-slate-300 leading-relaxed">
+                  Heavy-gauge double-knotted monofilament safety structures professionally rigged with active high-elevation fall arresters. Zero viewpoints compromised.
+                </p>
+              </div>
             </div>
-            <QuoteForm />
           </div>
         </div>
       </section>
