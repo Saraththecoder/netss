@@ -144,7 +144,7 @@ export const servicesData: ServiceItem[] = [
       { question: 'Can cats chew through the mosquito mesh?', answer: 'For homes with pets, we recommend our specialized high-tensile SS-304 steel wire mosquito mesh, which is completely cat-claw and chew-proof.' },
       { question: 'Is the mesh easily washable?', answer: 'Yes, our fiberglass and steel screens are dust-repellent and can be easily wiped down with a damp cloth or vacuumed.' }
     ],
-    image: 'https://imgs.search.brave.com/0ANyKgONmOC-Nu-6cMlJ7GJ8w1164VeAu0ab9HYEF_A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI0LzYv/NDI1OTExMzIyL1ZB/L1JZL0JPLzI4MzEy/MjYvc2xlZWstZnJh/bWUtbW9zcXVpdG8t/bWVzaC1zY3JlZW5z/LTUwMHg1MDAuanBn'
+    image: '/mosquito.jpeg'
   },
   // 9. Monkey Safety Nets
   {
@@ -212,22 +212,37 @@ export const servicesData: ServiceItem[] = [
     ],
     image: 'https://imgs.search.brave.com/057s6rp1GoxNIA-5Qtd8zzXKJWam_mcB6lu5BU8zxZ8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oYW5n/ZXJzd2FsYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDgvY2xvdGhlcy1k/cnlpLWhhbmdlcnMu/anBn'
   },
-  // 13. Stainless Steel Invisible Grills
+  // 13. Vertical Invisible Grill Systems
   {
-    slug: 'invisible-grill-nets',
-    title: 'Stainless Steel Invisible Grills',
+    slug: 'vertical-invisible-grills',
+    title: 'Vertical Invisible Grill Systems',
     category: 'invisible-grill',
     categoryLabel: 'Invisible Grill Systems',
-    tagline: 'The modern replacement for ugly iron grills. Maximum safety, zero view blockage.',
-    description: 'Upgrade your home aesthetics with our premium Invisible Grills. Replacing heavy, old-fashioned iron window grills, these high-tensile stainless steel cables are spaced at 2 to 4 inches, providing complete safety against falls while preserving the stunning panoramic views of your high-rise apartment.',
-    materialSpec: '316 Marine Grade Stainless Steel Wire with high-performance Nylon/Teflon coating, 2mm-3mm diameter.',
+    tagline: 'Sleek vertical cables providing complete high-rise balcony safety.',
+    description: 'Secure your balconies and high-elevation utility yards with our premium Vertical Invisible Grills. Spun from marine-grade 316 stainless steel wires running vertically at 2 to 4-inch increments, these high-tensile rigging networks ensure complete protection for children, toddlers, and pets while giving you 100% skyline views.',
+    materialSpec: '316 Marine Grade Stainless Steel Wire Core (2.5mm - 3.2mm diameter) wrapped in Dupont Teflon coating, anodized track anchors.',
     priceIndicator: 'Starting from ₹110 / sq.ft. (Including installation)',
-    features: ['High-Grade SS 316 Wire Core', 'Rust-Proof and Salt-Water Proof Coating', 'Breaking Threshold of up to 400+ kg', 'Compatible with smart home security alarms'],
+    features: ['SS 316 Marine Grade High-Tensile Core', 'High aesthetic value with zero view blockage', 'Saves children and pets from balcony elevations', 'Anti-abrasive and salt-water proof Teflon wrap'],
     faqs: [
-      { question: 'Can these steel cables be cut by intruders?', answer: 'Our invisible grills are made of high-tensile 316 Marine Grade Stainless Steel. Cutting them requires industrial wire-cutters, making them highly secure against typical intrusions.' },
-      { question: 'Do they rust over time?', answer: 'Not at all. We use Grade 316 SS wires coated in protective Nylon/Teflon, guaranteeing zero rust even in highly humid and coastal environments.' }
+      { question: 'What is the recommended gap spacing for balcony invisible grills?', answer: 'We recommend a standard safety spacing of 2 inches (50mm) for homes with toddlers or small pets, and 3 to 4 inches (75-100mm) for general balcony protection.' }
     ],
-    image: 'https://imgs.search.brave.com/CoNzYSQB9pDVgnsqyza3exB47V6qsgSSPV39VILG230/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2l4c3RhdGlj/LmNvbS9tZWRpYS8x/NzMxMmVfNzI5ZjFj/NjY5YjUzNDExODhl/NTVlZTViODVhZmE4/MTN-bXYyLmpwZy92/MS9maWxsL3dfNjAw/LGhfNDUwLGFsX2Ms/cV84MCx1c21fMC42/Nl8xLjAwXzAuMDEs/ZW5jX2F2aWYscXVh/bGl0eV9hdXRvLzE3/MzEyZV83MjlmMWM2/NjliNTM0MTE4OGU1/NWVlNWI4NWFmYTgx/M35tdjIuanBn'
+    image: '/s1.jpeg'
+  },
+  // 13.5. Horizontal Invisible Grill Systems
+  {
+    slug: 'horizontal-invisible-grills',
+    title: 'Horizontal Invisible Grill Systems',
+    category: 'invisible-grill',
+    categoryLabel: 'Invisible Grill Systems',
+    tagline: 'Modern horizontal steel wire layouts custom-fabricated for apartment windows.',
+    description: 'Perfect for wide horizontal windows, bedrooms, and structural ventilation duct openings. Our Horizontal Invisible Grills replace ugly, heavy iron bars with marine-grade steel cables mounted horizontally on high-strength anodized aluminum track systems, maintaining clean window operations and unhindered natural sunlight.',
+    materialSpec: '316 Marine Grade Stainless Steel Core wrapped in highly transparent DuPont Nylon/Teflon, expander anchors.',
+    priceIndicator: 'Starting from ₹115 / sq.ft. (Including installation)',
+    features: ['Grade 316 SS core resists up to 400+ kg loads', 'Perfect horizontal lines matching modern apartment window frames', 'Compatible with smart burglar alarms', 'Zero sanding or paint maintenance required'],
+    faqs: [
+      { question: 'Are horizontal invisible grills compatible with sliding window panes?', answer: 'Yes! They are installed on separate tracking borders on the inside or outside of your window frame, allowing sliding panels or casement windows to operate fully without any block.' }
+    ],
+    image: '/s2.jpeg'
   },
   // 14. Industrial & Construction Safety Nets
   {
@@ -277,6 +292,6 @@ export const servicesData: ServiceItem[] = [
       { question: 'What shade factors do you offer?', answer: 'We offer customizable shade factor variants of 50%, 75%, and 90%, depending on whether you are shading delicate nursery plants, balconies, or cars.' },
       { question: 'Will the color fade or tear in strong summer winds?', answer: 'No, our nets are UV-stabilized and feature lockstitch knitting that prevents fraying and structural tears under direct hot summer sunlight.' }
     ],
-    image: 'https://imgs.search.brave.com/A3I5yD7917ksfzhesBlQXfV0FPpWefnIs0IQkSO7YkY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z2Fyd2FyZWZpYnJl/cy5jb20vc2l0ZXMv/ZGVmYXVsdC9maWxl/cy9pbWFnZXMvc29s/dXRpb25zL1NoYWRl/JTIwTmV0LmpwZw'
+    image: '/shade.png'
   }
 ];

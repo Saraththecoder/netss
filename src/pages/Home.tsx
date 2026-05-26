@@ -221,7 +221,7 @@ export const Home: React.FC = () => {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" /> High-rise Window Grates</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" /> Bite-resistant Pet Grills</li>
               </ul>
-              <Link to="/services/invisible-grill-nets" className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary hover:text-brand-accent transition-colors font-display">
+              <Link to="/services/vertical-invisible-grills" className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary hover:text-brand-accent transition-colors font-display">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
