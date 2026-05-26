@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button';
 
 export const Faq: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<'all' | 'materials' | 'install' | 'pricing'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'materials' | 'install' | 'warranty'>('all');
 
   const faqItems = [
     {
@@ -29,12 +29,12 @@ export const Faq: React.FC = () => {
       answer: 'No. We provide 100% Free Site Inspection and Measurement audits. Our technical advisor visits your site, demonstrates material samples, measures the area, and provides a transparent quote without any commitment.'
     },
     {
-      category: 'pricing',
-      question: 'How is the pricing of safety nets calculated?',
-      answer: 'Our pricing is calculated per square foot of the covered area. Bird safety nets start around ₹12/sq.ft. including materials and installation. Invisible grills start from ₹110/sq.ft. depending on wire diameter (2mm to 3mm) and mounting track specifications.'
+      category: 'warranty',
+      question: 'How can I get a quotation or physical measurement for my property?',
+      answer: 'We provide a 100% Free Site Inspection and Measurement audit. Our technical advisor will visit your property, demonstrate premium material samples, measure exact area dimensions, and provide a detailed quotation tailored to your requirements.'
     },
     {
-      category: 'pricing',
+      category: 'warranty',
       question: 'Do you provide a warranty on safety installations?',
       answer: 'Yes! We provide an official 5-Year Performance Warranty card covering color degradation, tensile strength decay, and hook structural stability under harsh outdoor sunlight and heavy rain.'
     },
@@ -63,7 +63,7 @@ export const Faq: React.FC = () => {
             Safety FAQs Directory
           </h1>
           <p className="font-sans text-slate-400 text-sm sm:text-base max-w-md mx-auto">
-            Find transparent answers regarding materials, scheduling, pricing models, and structural rigging procedures.
+            Find transparent answers regarding materials, scheduling, warranty, and structural rigging procedures.
           </p>
         </div>
       </section>
@@ -79,7 +79,7 @@ export const Faq: React.FC = () => {
             </div>
             <input
               type="text"
-              placeholder="Search questions (e.g. rust, warranty, price)..."
+              placeholder="Search questions (e.g. rust, warranty, materials)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl font-sans text-brand-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500/20 focus:border-slate-800 transition-all shadow-sm"
@@ -107,10 +107,10 @@ export const Faq: React.FC = () => {
               Installation Fits
             </button>
             <button
-              onClick={() => setActiveCategory('pricing')}
-              className={`px-4 py-2 rounded-xl font-display font-bold text-xs tracking-wider uppercase transition-all ${activeCategory === 'pricing' ? 'bg-brand-primary text-white shadow' : 'bg-white text-slate-600 border border-slate-200/60 hover:bg-slate-100/50'}`}
+              onClick={() => setActiveCategory('warranty')}
+              className={`px-4 py-2 rounded-xl font-display font-bold text-xs tracking-wider uppercase transition-all ${activeCategory === 'warranty' ? 'bg-brand-primary text-white shadow' : 'bg-white text-slate-600 border border-slate-200/60 hover:bg-slate-100/50'}`}
             >
-              Pricing & Warranty
+              Warranty & Quote
             </button>
           </div>
 

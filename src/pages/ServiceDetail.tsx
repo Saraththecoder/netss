@@ -117,8 +117,8 @@ export const ServiceDetail: React.FC = () => {
                 <span className="font-semibold text-slate-700 font-sans">{service.materialSpec}</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider font-display">Pricing Indicator</span>
-                <span className="font-semibold text-brand-primary font-sans">{service.priceIndicator}</span>
+                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider font-display">Inspection & Measurement</span>
+                <span className="font-semibold text-brand-primary font-sans">100% Free Site Visit & Demonstration</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-xs text-slate-400 font-bold uppercase tracking-wider font-display">Fastening System</span>

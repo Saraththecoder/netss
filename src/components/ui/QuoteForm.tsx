@@ -15,7 +15,6 @@ export const QuoteForm: React.FC = () => {
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [calculatedQuote, setCalculatedQuote] = useState({ min: 0, max: 0 });
 
   const validateStep = () => {
     const newErrors: { [key: string]: string } = {};
@@ -46,37 +45,17 @@ export const QuoteForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateStep()) return;
-
-    // Standard rate calculation on the fly
-    // Bird Safety ~ ₹12-16/sqft, Invisible Grill ~ ₹110-130/sqft, Sports ~ ₹15-18/sqft
-    const size = Number(formData.customSize);
-    let minRate = 12;
-    let maxRate = 16;
-
-    if (formData.serviceCategory === 'invisible-grill') {
-      minRate = 110;
-      maxRate = 135;
-    } else if (formData.serviceCategory === 'sports-industrial') {
-      minRate = 15;
-      maxRate = 18;
-    }
-
-    setCalculatedQuote({
-      min: size * minRate,
-      max: size * maxRate,
-    });
     setIsSubmitted(true);
   };
 
   const triggerWhatsAppRedirect = () => {
-    const textMessage = `Hello Druva Safety Nets, I just generated an online estimate Quote:\n\n` +
+    const textMessage = `Hello Druva Safety Nets, I would like to request a free site measurement and customized quotation:\n\n` +
       `- Category: ${formData.serviceCategory === 'bird-safety' ? 'Bird/Child Nets' : formData.serviceCategory === 'invisible-grill' ? 'Invisible Grills' : 'Sports/Industrial Nets'}\n` +
-      `- Size: ${formData.customSize} Sq.Ft.\n` +
+      `- Approximate Size: ${formData.customSize} Sq.Ft.\n` +
       `- Zone: ${formData.city}\n` +
       `- Name: ${formData.name}\n` +
       `- Phone: ${formData.phone}\n\n` +
-      `Estimated Price: ₹${calculatedQuote.min.toLocaleString('en-IN')} - ₹${calculatedQuote.max.toLocaleString('en-IN')}.\n` +
-      `Please contact me to schedule a free physical measurement inspection.`;
+      `Please contact me to schedule a free physical measurement inspection and provide a detailed quotation.`;
 
     const encodedText = encodeURIComponent(textMessage);
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+917989612281&text=${encodedText}`;
@@ -89,17 +68,17 @@ export const QuoteForm: React.FC = () => {
         <div className="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mb-6">
           <ClipboardCheck className="w-8 h-8" />
         </div>
-        <h3 className="font-display font-bold text-2xl text-brand-primary mb-2">Estimate Generated Successfully!</h3>
+        <h3 className="font-display font-bold text-2xl text-brand-primary mb-2">Request Submitted Successfully!</h3>
         <p className="text-slate-500 font-sans text-sm md:text-base max-w-sm mb-6">
-          Based on your dimensions, here is your approximate budget range (including materials & professional fitment):
+          Thank you for your request. Our technical team will reach out to you shortly to discuss your custom dimensions.
         </p>
 
         <div className="bg-slate-50 rounded-2xl py-5 px-8 w-full max-w-sm mb-6 border border-slate-100/80">
-          <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold font-display">Estimated Budget</span>
-          <div className="text-2xl md:text-3xl font-display font-extrabold text-brand-primary mt-1">
-            ₹{calculatedQuote.min.toLocaleString('en-IN')} - ₹{calculatedQuote.max.toLocaleString('en-IN')}
+          <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold font-display">Next Steps</span>
+          <div className="text-lg md:text-xl font-display font-extrabold text-brand-primary mt-1.5 leading-snug">
+            Free On-Site Inspection & Customized Quotation
           </div>
-          <span className="text-[10px] text-slate-400 font-sans block mt-1">*Excluding GST. Actual measurements taken on-site prevail.</span>
+          <span className="text-[10px] text-slate-400 font-sans block mt-1.5">*Our engineer will physically inspect the site, show material samples, and provide a direct quote.</span>
         </div>
 
         <div className="flex flex-col gap-3 w-full max-w-sm">
@@ -111,7 +90,7 @@ export const QuoteForm: React.FC = () => {
             onClick={() => { setIsSubmitted(false); setStep(1); }}
             className="text-sm font-semibold text-slate-500 hover:text-brand-primary transition-colors py-2 font-display"
           >
-            Calculate Another Area
+            Submit Another Request
           </button>
         </div>
       </div>
@@ -260,7 +239,7 @@ export const QuoteForm: React.FC = () => {
                 Back
               </Button>
               <Button type="submit" variant="primary" className="flex-1">
-                Get Estimate Quote
+                Request Free Quote
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

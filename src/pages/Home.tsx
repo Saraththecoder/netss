@@ -96,8 +96,8 @@ export const Home: React.FC = () => {
             <div className="glass-card-dark rounded-2xl p-4 border border-white/10 shadow flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-accent flex items-center justify-center font-display font-bold">⚡</div>
               <div>
-                <h3 className="font-display font-bold text-sm text-white">Instant Online Quote</h3>
-                <p className="text-[10px] text-slate-400 font-sans">Get budget calculations in 30 seconds</p>
+                <h3 className="font-display font-bold text-sm text-white">Free Site Measurement</h3>
+                <p className="text-[10px] text-slate-400 font-sans">Schedule professional inspection in 30 seconds</p>
               </div>
             </div>
             <QuoteForm />
@@ -254,10 +254,6 @@ export const Home: React.FC = () => {
                     <p className="text-slate-500 font-sans text-xs sm:text-sm leading-relaxed line-clamp-3">
                       {service.tagline}
                     </p>
-                    <div className="flex flex-col gap-1 border-t border-slate-50 pt-3 mt-auto">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-display">Starting Price</span>
-                      <span className="font-sans font-extrabold text-brand-primary text-sm">{service.priceIndicator}</span>
-                    </div>
                     <Link 
                       to={`/services/${service.slug}`}
                       className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-slate-50 text-brand-primary hover:bg-brand-primary hover:text-white font-display font-bold text-xs rounded-xl tracking-wide transition-all mt-2 border border-slate-100"
@@ -351,7 +347,7 @@ export const Home: React.FC = () => {
               Pre-Sale Customer Queries
             </h2>
             <p className="text-slate-500 font-sans text-sm sm:text-base leading-relaxed">
-              Find transparent answers regarding materials, scheduling, pricing models, and structural rigging procedures.
+              Find transparent answers regarding materials, scheduling, warranty, and structural rigging procedures.
             </p>
           </div>
 
