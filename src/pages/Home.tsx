@@ -57,7 +57,7 @@ export const Home: React.FC = () => {
           {/* Main Visual Image Banner replacing the header/text */}
           <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-64 sm:h-96 w-full bg-slate-950/20 max-w-3xl">
             <img 
-              src="/home.jpeg" 
+              src="/home.jpg" 
               alt="Druva Safety Nets Balcony Installation" 
               className="w-full h-full object-cover transition-transform duration-[1000ms] hover:scale-105"
             />
