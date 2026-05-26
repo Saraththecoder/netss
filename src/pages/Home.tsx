@@ -97,6 +97,16 @@ export const Home: React.FC = () => {
             <Star className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
             <span>South India's Most Trusted Safety Installer - <strong>DRUVA Safety Nets</strong></span>
           </div>
+
+          {/* Premium SEO H1 Heading */}
+          <div className="flex flex-col gap-4 max-w-3xl">
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight">
+              South India's Premier <span className="text-brand-accent">Balcony Safety Nets</span> & Invisible Grills
+            </h1>
+            <p className="font-sans text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Architectural-grade child fall prevention netting, pigeon exclusions, and marine SS-316 invisible grills custom-tensioned for high-rise residences.
+            </p>
+          </div>
           
           {/* Main Visual Image Banner / Slideshow */}
           <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-64 sm:h-96 md:h-[450px] w-full bg-slate-950/20 max-w-3xl group">
@@ -112,6 +122,12 @@ export const Home: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-[4500ms] ease-out"
                   style={idx === currentSlide ? { transform: 'scale(1.05)', transition: 'transform 4500ms ease-out' } : undefined}
                 />
+                {/* Visual Title and Description Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/25 to-transparent z-15 flex flex-col justify-end p-6 md:p-10 text-left">
+                  <span className="text-[10px] uppercase font-extrabold tracking-widest text-brand-accent mb-1.5 font-display">Featured Installation</span>
+                  <h3 className="font-display font-extrabold text-lg md:text-2xl text-white leading-tight mb-2">{slide.title}</h3>
+                  <p className="font-sans text-xs md:text-sm text-slate-300 max-w-xl leading-relaxed">{slide.desc}</p>
+                </div>
               </div>
             ))}
 
@@ -145,13 +161,13 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto mt-2">
-            <Link to="/contact">
+            <Link to="/contact" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto">
                 Book Free Site Visit
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:7989612281">
+            <a href="tel:7989612281" className="w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5">
                 <PhoneCall className="w-5 h-5 mr-2 text-brand-accent" />
                 +91 79896 12281
@@ -326,13 +342,22 @@ export const Home: React.FC = () => {
                     <p className="text-slate-500 font-sans text-xs sm:text-sm leading-relaxed line-clamp-3">
                       {service.tagline}
                     </p>
-                    <Link 
-                      to={`/services/${service.slug}`}
-                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-slate-50 text-brand-primary hover:bg-brand-primary hover:text-white font-display font-bold text-xs rounded-xl tracking-wide transition-all mt-2 border border-slate-100"
-                    >
-                      <span>Explore Technical Details</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="mt-auto flex flex-col xs:flex-row gap-2 w-full pt-2">
+                      <Link 
+                        to={`/services/${service.slug}`}
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-4 bg-slate-50 text-brand-primary hover:bg-brand-primary hover:text-white font-display font-bold text-xs rounded-xl transition-all border border-slate-100"
+                      >
+                        <span>Specifications</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <a 
+                        href="tel:7989612281"
+                        className="inline-flex items-center justify-center gap-1.5 py-2.5 px-4 bg-brand-primary text-white hover:bg-slate-800 font-display font-bold text-xs rounded-xl transition-all shadow-sm"
+                      >
+                        <PhoneCall className="w-3.5 h-3.5" />
+                        <span>Call</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}

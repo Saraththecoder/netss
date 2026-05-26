@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
 
       {/* Sticky Main Header */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-30 w-full transition-all duration-300 ${
           isScrolled 
             ? 'glass-nav py-3 shadow-md' 
             : 'bg-white py-4 border-b border-slate-100'
