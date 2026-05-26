@@ -30,23 +30,23 @@ export const About: React.FC = () => {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Visual Grid Left */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between h-48">
+          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between min-h-[12rem]">
               <Award className="w-8 h-8 text-amber-500" />
               <span className="font-display font-extrabold text-brand-primary text-lg">ISO 9001:2015</span>
               <span className="text-[10px] uppercase font-bold text-slate-400">Material Standard</span>
             </div>
-            <div className="bg-brand-primary rounded-2xl p-6 text-white flex flex-col justify-between h-48 sm:mt-6">
+            <div className="bg-brand-primary rounded-2xl p-6 text-white flex flex-col justify-between min-h-[12rem] sm:mt-6">
               <ShieldCheck className="w-8 h-8 text-amber-500" />
               <span className="font-display font-extrabold text-white text-lg">5 Years Warranty</span>
               <span className="text-[10px] uppercase font-bold text-slate-400">Performance Card</span>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between h-48 sm:-mt-6">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between min-h-[12rem] sm:-mt-6">
               <ThumbsUp className="w-8 h-8 text-amber-500" />
               <span className="font-display font-extrabold text-brand-primary text-lg">4.9 / 5 Rated</span>
               <span className="text-[10px] uppercase font-bold text-slate-400">Google Customer Score</span>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between h-48">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between min-h-[12rem]">
               <Users2 className="w-8 h-8 text-amber-500" />
               <span className="font-display font-extrabold text-brand-primary text-lg">12,000+ Fits</span>
               <span className="text-[10px] uppercase font-bold text-slate-400">Apartments Secured</span>

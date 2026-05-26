@@ -170,7 +170,7 @@ export const Home: React.FC = () => {
           </div>
 
           {/* Quick Metrics */}
-          <div className="grid grid-cols-3 gap-6 md:gap-10 border-t border-white/10 pt-8 mt-4 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 border-t border-white/10 pt-8 mt-4 w-full text-center sm:text-left">
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-accent">12,000+</span>
               <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1">Homes Protected</span>
