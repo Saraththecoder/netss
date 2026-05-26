@@ -1,6 +1,6 @@
 import React from 'react';
 import { QuoteForm } from '../components/ui/QuoteForm';
-import { Phone, Clock, MapPin, ShieldAlert } from 'lucide-react';
+import { Phone, Clock, MapPin, ShieldAlert, Mail } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
 
 const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -67,6 +67,19 @@ export const Contact: React.FC = () => {
                   +91 79896 12281
                 </a>
                 <span className="text-[10px] text-slate-400 font-sans">Free consulting and sample displays</span>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-brand-primary shrink-0">
+                <Mail className="w-5 h-5 text-brand-primary" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs text-slate-400 font-display font-bold uppercase tracking-wider">Email Inquiry</span>
+                <a href="mailto:Druvasafetynets@gmail.com" className="text-base font-bold text-brand-primary hover:underline font-display break-all">
+                  Druvasafetynets@gmail.com
+                </a>
+                <span className="text-[10px] text-slate-400 font-sans">Replies within 2 business hours</span>
               </div>
             </div>
 

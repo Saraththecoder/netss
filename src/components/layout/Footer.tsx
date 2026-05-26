@@ -127,11 +127,19 @@ export const Footer: React.FC = () => {
             ))}
           </ul>
           
-          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 mt-2">
-            <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Corporate HQ</span>
-            <span className="text-xs text-slate-400 leading-relaxed font-sans block">
-              12, 1st Cross, HMT Layout, Vidyaranyapura, Bengaluru, Karnataka 560097
-            </span>
+          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 mt-2 flex flex-col gap-2.5">
+            <div>
+              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Corporate HQ</span>
+              <span className="text-xs text-slate-400 leading-relaxed font-sans block">
+                12, 1st Cross, HMT Layout, Vidyaranyapura, Bengaluru, Karnataka 560097
+              </span>
+            </div>
+            <div className="border-t border-slate-800/80 pt-2 flex flex-col gap-0.5 text-xs">
+              <span className="text-[9px] uppercase font-bold text-slate-500 tracking-wider block">Direct Email</span>
+              <a href="mailto:Druvasafetynets@gmail.com" className="text-slate-300 hover:text-white transition-colors break-all">
+                Druvasafetynets@gmail.com
+              </a>
+            </div>
           </div>
         </div>
 

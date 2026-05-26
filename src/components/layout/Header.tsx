@@ -48,10 +48,12 @@ export const Header: React.FC = () => {
   return (
     <>
       <div className="bg-brand-primary text-white text-[10px] sm:text-[11px] md:text-xs font-sans py-2 px-4 sm:px-6 flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-1 tracking-wide font-medium">
-        <div className="flex items-center gap-1.5 md:gap-3">
+        <div className="flex items-center gap-1.5 md:gap-3 flex-wrap justify-center sm:justify-start">
           <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-slate-300" /> ISO Certified Materials</span>
           <span className="hidden sm:inline">|</span>
           <span className="hidden sm:inline">📞 +91 79896 12281</span>
+          <span className="hidden lg:inline">|</span>
+          <a href="mailto:Druvasafetynets@gmail.com" className="hidden lg:inline hover:text-slate-300 transition-colors">✉ Druvasafetynets@gmail.com</a>
         </div>
         <div className="flex items-center gap-3">
           <a 
