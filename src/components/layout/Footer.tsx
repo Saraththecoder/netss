@@ -42,6 +42,11 @@ export const Footer: React.FC = () => {
     'Varthur',
     'Sarjapur',
     'Marthahalli',
+    'East Bangalore (Whitefield, Bellandur, HSR)',
+    'South Bangalore (Jayanagar, JP Nagar, E-City)',
+    'North Bangalore (Hebbal, Yelahanka, Vidyaranyapura)',
+    'West Bangalore (RR Nagar, Rajajinagar, Kengeri)',
+    'Central Bangalore (Indiranagar, Malleshwaram)',
   ];
 
   return (
