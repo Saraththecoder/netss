@@ -28,7 +28,7 @@ export const servicesData: ServiceItem[] = [
       { question: 'Will this block my balcony view or ventilation?', answer: 'No. Our high-tensile translucent nets are designed to have minimal visual presence. You get 100% natural light and airflow while staying fully protected.' },
       { question: 'What is the lifespan of these safety nets?', answer: 'Our HDPE and nylon copolymer nets are UV-stabilized and built to endure harsh sunlight and rains, easily lasting between 5 to 8 years.' }
     ],
-    image: 'https://imgs.search.brave.com/sKkF_aL4iRNoBiFmTEC9hNVESHeAp09pkApEa3cAUKM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmFsY29ueW5ldHNu/ZWFyYnltZS5jb20v/aW1nL3NsaWRlcy9i/ZW5nYWx1cnUtYmFs/Y29ueS1zYWZldHkt/bmV0czYucG5n'
+    image: '/balcony.jpeg'
   },
   // 2. Kids Safety Nets for Balcony
   {
