@@ -5,7 +5,7 @@ import { Footer } from './components/layout/Footer';
 import { FloatingCTA } from './components/ui/FloatingCTA';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { Gallery } from './pages/Gallery';
+import { Services } from './pages/Services';
 import { Faq } from './pages/Faq';
 import { BlogHub } from './pages/BlogHub';
 import { BlogPost } from './pages/BlogPost';
@@ -27,7 +27,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-slate-50/20 font-sans text-brand-primary antialiased">
+      <div className="flex flex-col min-h-screen bg-brand-light font-sans text-brand-primary antialiased">
         {/* Sticky Header Navigation */}
         <Header />
 
@@ -36,7 +36,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/blog" element={<BlogHub />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

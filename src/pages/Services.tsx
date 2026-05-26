@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 
-export const Gallery: React.FC = () => {
+export const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'bird-safety' | 'invisible-grill' | 'sports-industrial'>('all');
 
-  const galleryItems = servicesData.map((service, index) => ({
+  const servicesItems = servicesData.map((service, index) => ({
     id: index + 1,
     title: service.title,
     category: service.category,
@@ -17,8 +17,8 @@ export const Gallery: React.FC = () => {
   }));
 
   const filteredItems = activeTab === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeTab);
+    ? servicesItems 
+    : servicesItems.filter(item => item.category === activeTab);
 
   return (
     <div className="flex flex-col w-full bg-slate-50/50">
@@ -26,19 +26,17 @@ export const Gallery: React.FC = () => {
       <section className="bg-slate-900 text-white py-16 px-6 text-center relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.06),transparent_70%)]"></div>
         <div className="max-w-4xl mx-auto flex flex-col gap-3 relative z-10">
-          <span className="text-xs uppercase tracking-widest text-amber-500 font-extrabold font-display">Completed Projects Portfolio</span>
+          <span className="text-xs uppercase tracking-widest text-brand-accent font-extrabold font-display">Our Professional Services Portfolio</span>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
-            Our Installation Showcase
+            Our Services Showcase
           </h1>
-          <p className="font-sans text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-            Explore our professional gallery of premium residential safety netting and invisible grill rigs.
+          <p className="font-sans text-slate-300 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+            Explore our professional selection of premium residential safety netting and invisible grill installations.
           </p>
         </div>
       </section>
 
-
-
-      {/* 3. Photo Portfolio Grid */}
+      {/* 3. Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col gap-10">
           
@@ -48,7 +46,7 @@ export const Gallery: React.FC = () => {
               onClick={() => setActiveTab('all')}
               className={`px-5 py-2.5 rounded-xl font-display font-bold text-xs tracking-wider uppercase transition-all duration-200 ${activeTab === 'all' ? 'bg-brand-primary text-white shadow' : 'bg-white text-slate-600 border border-slate-200/60 hover:bg-slate-100/50'}`}
             >
-              All Rigs
+              All Services
             </button>
             <button
               onClick={() => setActiveTab('bird-safety')}

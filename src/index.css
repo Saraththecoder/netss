@@ -1,16 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-dark: #1f0003;
-  --color-brand-darker: #130002;
-  --color-brand-light: #fafbfb;
-  --color-brand-primary: #7c0a1a;
-  --color-brand-secondary: #55000c;
-  --color-brand-accent: #8e98a5;
-  --color-brand-accentHover: #5c6775;
+  --color-brand-dark: #2a050a;
+  --color-brand-darker: #180104;
+  --color-brand-light: #fdfaf2;
+  --color-brand-primary: #7a0c1e;
+  --color-brand-secondary: #5c0613;
+  --color-brand-accent: #bf9f62;
+  --color-brand-accentHover: #a5854b;
   --color-brand-success: #10b981;
   --color-brand-danger: #ef4444;
   --color-brand-whatsapp: #15c21e;
+
+  /* Redefining Tailwind's gray/slate palette to be warm cream & rich maroon */
+  --color-slate-50: #fdfaf2;      /* Pure rich cream background */
+  --color-slate-100: #f3eae0;     /* Soft warm beige/cream border or accent */
+  --color-slate-200: #e7dac9;     /* Deep cream border */
+  --color-slate-300: #d6c3aa;     /* Warm muted beige */
+  --color-slate-400: #bfa888;     /* Warm bronze-grey text */
+  --color-slate-500: #8c7358;     /* Warm brown text */
+  --color-slate-600: #6d543b;     /* Darker brown text */
+  --color-slate-700: #4a0d16;     /* Deep maroon */
+  --color-slate-800: #33050c;     /* Darker maroon */
+  --color-slate-900: #1f0105;     /* Extreme rich maroon-black */
 
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
