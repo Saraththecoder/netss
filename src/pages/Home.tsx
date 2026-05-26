@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, PhoneCall, ArrowRight, Star } from 'lucide-react';
+import { CheckCircle2, PhoneCall, ArrowRight, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Accordion } from '../components/ui/Accordion';
 import { servicesData } from '../data/servicesData';
@@ -16,6 +16,50 @@ export const Home: React.FC = () => {
   });
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
   const [searchText, setSearchText] = useState('');
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slideshowImages = [
+    {
+      src: '/image 1.jpg',
+      title: 'High-Rise Balcony Safety Nets',
+      desc: 'Heavy-gauge double-knotted monofilament safety netting custom-tensioned for absolute balcony fall protection.'
+    },
+    {
+      src: '/image 2.jpg',
+      title: 'Rustproof Invisible Grills',
+      desc: 'Marine-grade 316 stainless steel cable wires wrapped in anti-abrasive DuPont Teflon. 100% skyline views.'
+    },
+    {
+      src: '/image 3.jpg',
+      title: 'Certified Child & Pet Safety Barriers',
+      desc: 'Tough, bite-resistant safety networks designed to protect active toddlers, babies, and household pets.'
+    },
+    {
+      src: '/image 4.jpg',
+      title: 'Practice & Sports Net Enclosures',
+      desc: 'Knotted high-impact nylon netting custom-fabricated for rooftop fields, cricket pitches, and schools.'
+    },
+    {
+      src: '/image 5.jpg',
+      title: 'Humane Pigeon Exclusion Nets',
+      desc: 'Durable polymer grids and polycarbonate bird spikes that prevent roosting and keep ducts clean.'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [slideshowImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length);
+  };
 
   const categoriesList: { value: CategoryType; label: string }[] = [
     { value: 'all', label: 'All Services' },
@@ -54,21 +98,65 @@ export const Home: React.FC = () => {
             <span>South India's Most Trusted Safety Installer - <strong>DRUVA Safety Nets</strong></span>
           </div>
           
-          {/* Main Visual Image Banner replacing the header/text */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-64 sm:h-96 w-full bg-slate-950/20 max-w-3xl">
-            <img 
-              src="/home.jpg" 
-              alt="Druva Safety Nets Balcony Installation" 
-              className="w-full h-full object-cover transition-transform duration-[1000ms] hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6 text-left flex flex-col gap-1.5">
-              <span className="self-start text-[10px] font-display font-extrabold text-brand-accent tracking-widest uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
-                Premium Fitment
-              </span>
-              <h2 className="font-display font-extrabold text-xl sm:text-2xl text-white tracking-tight leading-snug">
-                High-Rise Balcony Safety Nets & Invisible Grills
-              </h2>
+          {/* Main Visual Image Banner / Slideshow */}
+          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-64 sm:h-96 md:h-[450px] w-full bg-slate-950/20 max-w-3xl group">
+            {/* Slides Loop (Crossfade with continuous scale animation when active) */}
+            {slideshowImages.map((slide, idx) => (
+              <div 
+                key={idx}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+              >
+                <img 
+                  src={slide.src} 
+                  alt={slide.title} 
+                  className="w-full h-full object-cover transition-transform duration-[4500ms] ease-out"
+                  style={idx === currentSlide ? { transform: 'scale(1.05)', transition: 'transform 4500ms ease-out' } : undefined}
+                />
+                
+                {/* Background Shadow Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+                
+                {/* Text Content Overlay */}
+                <div className="absolute bottom-10 left-6 right-6 text-left flex flex-col gap-2 max-w-xl md:left-10 md:bottom-12">
+                  <span className="self-start text-[9px] md:text-[10px] font-display font-extrabold text-brand-accent tracking-widest uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
+                    Certified Installation
+                  </span>
+                  <h2 className="font-display font-extrabold text-lg sm:text-2xl md:text-3xl text-white tracking-tight leading-tight">
+                    {slide.title}
+                  </h2>
+                  <p className="font-sans text-[11px] sm:text-xs md:text-sm text-slate-300 leading-relaxed line-clamp-2">
+                    {slide.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Manual Arrows Navigation */}
+            <button 
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/35 hover:bg-brand-primary/80 text-white flex items-center justify-center backdrop-blur-xs border border-white/10 transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/35 hover:bg-brand-primary/80 text-white flex items-center justify-center backdrop-blur-xs border border-white/10 transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            {/* Interactive Progress dots */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+              {slideshowImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${idx === currentSlide ? 'w-6 bg-brand-accent' : 'w-1.5 bg-white/40 hover:bg-white/70'}`}
+                  aria-label={`Jump to slide ${idx + 1}`}
+                />
+              ))}
             </div>
           </div>
 
