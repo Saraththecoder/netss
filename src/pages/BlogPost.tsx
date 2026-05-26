@@ -3,10 +3,17 @@ import { useParams, Link } from 'react-router-dom';
 import { blogsData } from '../data/blogsData';
 import { Button } from '../components/ui/Button';
 import { Calendar, User, ArrowLeft, ArrowRight } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 export const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogsData.find((p) => p.slug === slug);
+
+  useSEO({
+    title: post ? post.title : 'Safety Guide',
+    description: post ? post.excerpt : 'Expert insights and architectural guides from Druva Safety Nets.',
+    keywords: post ? post.tags.join(', ') : 'Home Safety Guides'
+  });
 
   if (!post) {
     return (

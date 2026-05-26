@@ -2,8 +2,14 @@ import React from 'react';
 import { ShieldCheck, Award, ThumbsUp, Users2, CheckCircle2 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const About: React.FC = () => {
+  useSEO({
+    title: 'About Our Company | Certified Home Safety Experts',
+    description: 'Learn about Druva Safety Nets, South India\'s leading professional installer of high-rise safety nets, child-safety balcony barriers, anti-pigeon netting, and rustproof invisible grills.',
+    keywords: 'About Druva Safety Nets, Professional Netting Installers, ISO Certified Safety Netting, Balcony Net Experts'
+  });
   return (
     <div className="flex flex-col w-full">
       {/* 1. Header Banner */}

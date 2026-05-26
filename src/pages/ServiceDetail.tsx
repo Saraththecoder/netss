@@ -4,10 +4,17 @@ import { servicesData } from '../data/servicesData';
 import { Button } from '../components/ui/Button';
 import { Accordion } from '../components/ui/Accordion';
 import { CheckCircle2, PhoneCall, HelpCircle, FileText, ChevronRight } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 export const ServiceDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = servicesData.find((s) => s.slug === slug);
+
+  useSEO({
+    title: service ? `Premium ${service.title} Installation` : 'Safety Services',
+    description: service ? `${service.tagline} Explore material standards, anti-UV capabilities, and structural high-rise fastening specifications of our custom netting.` : 'Explore professional safety netting and invisible grill solutions from Druva Safety Nets.',
+    keywords: service ? `${service.categoryLabel}, ${service.title}, Balcony Netting, Safety Net Installer` : 'Balcony Netting, Invisible Grills'
+  });
 
   if (!service) {
     return (

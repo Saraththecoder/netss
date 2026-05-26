@@ -5,10 +5,16 @@ import { Button } from '../components/ui/Button';
 import { QuoteForm } from '../components/ui/QuoteForm';
 import { Accordion } from '../components/ui/Accordion';
 import { servicesData } from '../data/servicesData';
+import { useSEO } from '../hooks/useSEO';
 
 type CategoryType = 'all' | 'bird-safety' | 'invisible-grill' | 'sports-industrial';
 
 export const Home: React.FC = () => {
+  useSEO({
+    title: 'Pigeon Nets, Balcony Safety Nets & Invisible Grills',
+    description: 'South India\'s most trusted home safety provider. Professional balcony safety nets, marine-grade stainless steel invisible grills, pigeon spikes, child play safeguards, and sports netting in Bangalore. Request a free site inspection.',
+    keywords: 'Balcony Safety Nets, Invisible Grills, Pigeon Safety Nets, Kids Safety Nets, Bird Spikes, Cricket Practice Nets, Sports Nets Installation, Druva Safety Nets'
+  });
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
   const [searchText, setSearchText] = useState('');
 

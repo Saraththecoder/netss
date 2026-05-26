@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
+import { useSEO } from '../hooks/useSEO';
 
 export const Services: React.FC = () => {
+  useSEO({
+    title: 'Our Safety Netting & Invisible Grill Services',
+    description: 'Browse our complete suite of architectural safety installations: double-knotted pigeon nets, heavy-duty child safety guards, bird spikes, cricket practice boxes, and customized invisible grills.',
+    keywords: 'Balcony Safety Nets, Invisible Grills Catalog, Safety Nets Showcase, Bird Spikes Services'
+  });
   const [activeTab, setActiveTab] = useState<'all' | 'bird-safety' | 'invisible-grill' | 'sports-industrial'>('all');
 
   const servicesItems = servicesData.map((service, index) => ({

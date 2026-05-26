@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { AccordionItem } from '../components/ui/Accordion';
 import { Search, HelpCircle, PhoneCall } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { useSEO } from '../hooks/useSEO';
 
 export const Faq: React.FC = () => {
+  useSEO({
+    title: 'Safety FAQs Directory | FAQ Center',
+    description: 'Get clear, professional answers on safety net durability, child balcony fall prevention, monkey net specs, and our 5-year performance warranty program.',
+    keywords: 'Safety Nets FAQ, Invisible Grill Specifications, Balcony Netting Questions, High rise Net Warranty'
+  });
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<'all' | 'materials' | 'install' | 'warranty'>('all');
 

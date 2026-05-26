@@ -1,6 +1,7 @@
 import React from 'react';
 import { QuoteForm } from '../components/ui/QuoteForm';
 import { Phone, Clock, MapPin, ShieldAlert } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -22,6 +23,11 @@ const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Contact: React.FC = () => {
+  useSEO({
+    title: 'Contact Us | Book Free Site Measurement & Demonstration',
+    description: 'Get in touch with the home safety experts at Druva Safety Nets. Book a 100% free physical measurement audit and material inspection at your property in Bangalore.',
+    keywords: 'Contact Druva Safety Nets, Safety Nets Bangalore Contact, Book Netting Inspection'
+  });
   return (
     <div className="flex flex-col w-full bg-slate-50/50">
       {/* Header Banner */}
@@ -33,7 +39,7 @@ export const Contact: React.FC = () => {
             Connect With Rigging Experts
           </h1>
           <p className="font-sans text-slate-400 text-sm sm:text-base max-w-md mx-auto">
-            Get an instant online budget estimate or book a free physical measurement audit and material inspection today.
+            Book a free physical measurement audit, view high-quality material samples, and receive a customized quotation today.
           </p>
         </div>
       </section>

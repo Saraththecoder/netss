@@ -2,8 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data/blogsData';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 export const BlogHub: React.FC = () => {
+  useSEO({
+    title: 'Home Safety Guides & Netting Installation Blog',
+    description: 'Explore safety checklists, invisible grill tips, expert pigeon netting exclusions, AC duct safety, and DIY building guides from the engineers at Druva Safety Nets.',
+    keywords: 'Home Safety Blog, Balcony Netting Tips, Invisible Grill Guides, Pigeon Prevention Articles'
+  });
   return (
     <div className="flex flex-col w-full bg-slate-50/50">
       {/* Header */}
